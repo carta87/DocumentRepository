@@ -1,0 +1,13 @@
+<div>
+    <nav>
+        <ul>
+            <li *ngFor="let menu of lista let indice = index">
+                {{dias[indice]}} = 
+                <a 
+                    routerLink="/{{menu}}"
+                    routerLinkActive= "active">{{menu}}
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

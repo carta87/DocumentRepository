@@ -1,0 +1,172 @@
+<div class="container">
+  <table class="table table-striped table-hover table-bordered align-middle">
+      <thead>
+          <tr>
+              <th scope="col">Referencia</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">Ejemplo</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><strong>Jaxb "jaz-binding" pronunciacion</strong></td>
+              <td>
+                <a href="https://www.vogella.com/tutorials/JAXB/article.html">Ver info</a><br><br>
+                Java JAXB  o Java XML API Binding nos permite trabajar con XML y JSON de una forma cómoda usando Java.  Vamos a ver una introducción a este estándar y sus anotaciones <br><br>
+                Con versiones de Java anteriores a Java 11, JAXB era parte de JVM y podía usarlo directamente sin definir bibliotecas adicionales.
+                <br><br>
+                A partir de Java 11, JAXB ya no forma parte de JRE y debe configurar las bibliotecas relevantes a través de su sistema de gestión de dependencias, por ejemplo, Maven o Gradle
+              </td>
+              <td>
+                <img
+                src="../../../../../assets/framework/Jaxb/ContextMarshaller.png"
+                alt="ContextMarshaller"
+                title="ContextMarshaller"><br><br>
+              </td>
+          </tr>
+
+          <tr>
+              <td><a href="https://programmerclick.com/article/6698169995/">Anotaciones </a></td>
+              <td>
+                <strong>@XmlRootElement(namespace = "namespace")</strong> que especifica la clase raiz que vamos a convertir a XML. <br><br><strong>@XmlElement(name = "neuName")</strong> permite cambiar el nombre de los elementos cuando el fichero XML se construya <br><br>
+                <strong>@XmlType(propOrder = {{abrellave}} "field2", "field1",.. {{cierrallave}})</strong>Permite definir el orden en que se escriben los campos en el archivo XML <br><br>
+                <strong>@XmlEnum</strong> Asigna un tipo de enumeración Enum a la representación XML. <br><br>
+                <strong> @XmlEnumValue </strong>Asigna una constante de enumeración <strong>Enum</strong> en Enumtipo a la representación XML. <br><br>
+                <strong>@XmlAnyElement</strong> Asigna una propiedad JavaBean a una representación de conjunto de información XML y/o un elemento JAXB. <br><br>
+                Esta anotación sirve como una propiedad "catch-all" mientras desorganiza el contenido xml en una instancia de una clase anotada JAXB. Por lo general, anota una propiedad JavaBean de varios valores, pero puede ocurrir en una propiedad JavaBean de un solo valor. Durante la desclasificación, cada elemento xml que no coincide con una anotación estática @XmlElement o @XmlElementRef para las otras propiedades de JavaBean en la clase, se agrega a esta propiedad "catch-all". <br><br>
+                <strong>@XmlAccessorType </strong>Controla si los campos o las propiedades de Javabean se serializan de forma predeterminada. Esta anotación se puede utilizar con los siguientes elementos del programa: <strong>PROPERTY, FIEL, PUBLIC_MEMBER, NONE = a nivel de paquete o una clase de primer nivel</strong> <br><br>
+                Esta anotación proporciona control sobre la serialización predeterminada de propiedades y campos en una clase. <br>La anotación en un paquete se aplica a todas las clases del paquete. Se aplica la siguiente semántica de herencia:
+                <br><br>
+                * Si hay un @XmlAccessorType en una clase, entonces se usa. <br>
+                * De lo contrario, si existe un @XmlAccessorType en una de sus superclases, se hereda. <br>
+                * De lo contrario, se hereda el @XmlAccessorType en un paquete. <br>
+              </td>
+              <td>
+                <img
+                src="../../../../../assets/framework/Jaxb/Anotaciones.png"
+                alt="Anotaciones"
+                title="Anotaciones"><br><br>
+              </td>
+          </tr>
+          <tr>
+              <td><strong>contexto </strong></td>
+              <td>
+                El contexto se encarga de definir los objetos de negocio que vamos a utilizar
+              </td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td><strong>marshaller</strong></td>
+              <td>
+                El marshaller en que forma vamos a generar la estructura
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><strong>@XmlType</strong></td>
+              <td>
+                se usa en anotaciones de clase, y a menudo se usa junto con @XmlRootElement, @XmlAccessorType. Tiene tres atributos: nombre, propOrder, espacio de nombres, y solo se usan a menudo los dos primeros atributos. Como:
+                <br><br>
+                @XmlType(name = "basicStruct", propOrder = {{abrellave}}
+                "intValue",
+                "stringArray",
+                "stringValue" {{cierrallave}}
+                )
+              </td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td><strong>@XmlElement</strong></td>
+              <td>
+                asigna los atributos de los objetos java a los nodos xml. Al usar @XmlElement, puede cambiar el nombre de los atributos de los objetos java que se muestran en xml a través del atributo name. Como: <br><br>
+                @XmlElement(name="Address") <br>
+                private String yourAddress;
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><strong>@XmlRootElement</strong></td>
+              <td>
+                se usa para anotaciones de nivel de clase, correspondientes al elemento de seguimiento xml, que a menudo se usa con @XmlType y @XmlAccessorType. Como: <br><br>
+                @XmlType <br>
+                @XmlAccessorType(XmlAccessType.FIELD) <br>
+                @XmlRootElement <br>
+                public class Address {{abrellave}}{{cierrallave}} <br>
+              </td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td><strong>@XmlAccessorType</strong></td>
+              <td>
+                se utiliza para especificar el método de acceso de los atributos de objeto java al generar archivos xml a partir de objetos java. A menudo se usa con @XmlRootElement, @XmlType. Sus valores de atributo son 4 valores de enumeración de XmlAccessType, que se dividen en:
+                <br><br>
+                <strong>XmlAccessType.FIELD:</strong> todas las variables miembro en el objeto java
+                <br>
+                <strong>XmlAccessType.PROPERTY:</strong> todas las variables miembro en el objeto java al que accede getter / setter
+                <br>
+                <strong>XmlAccessType.PUBLIC_MEMBER:</strong> todas las variables miembro de la autoridad de acceso público en el objeto java y las variables miembro a las que accede getter / setter
+                <br>
+                <strong>XmlAccessType.NONE:</strong> todos los atributos del objeto java no están asignados a elementos xml <br><br>
+                Nota: El nivel de acceso predeterminado de @XmlAccessorType es XmlAccessType.PUBLIC_MEMBER, por lo tanto, si la variable miembro privado en el objeto java se establece con el método público getter / setter, no use las anotaciones @XmlElement y @XmlAttribute en la variable privada, de lo contrario Cuando el objeto java genera xml, informará el error de que el mismo atributo existe dos veces en la clase java. Del mismo modo, si el permiso de acceso de @XmlAccessorType es XmlAccessType.NONE, si se usan las anotaciones @XmlElement o @XmlAttribute en las variables miembro de Java, estas variables miembro aún se pueden asignar al archivo xml.
+              </td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td><strong>@XmlAccessorOrder</strong></td>
+              <td>
+                se usa para ordenar los elementos xml generados por los objetos java. Tiene dos valores de atributo:
+                <br><br>
+                <strong>AccessorOrder.ALPHABETICAL:</strong> ordena los elementos xml generados en orden alfabético <br>
+                <strong>XmlAccessOrder.UNDEFINED:</strong> no ordenar
+              </td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td><strong>@XmlTransient</strong></td>
+              <td>
+                se utiliza para indicar que este atributo se ignora al mapear xml desde objetos java. Es decir, este elemento no aparece en el archivo xml generado.
+              </td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td><strong>@XmlJavaTypeAdapter</strong></td>
+              <td>
+                se usa comúnmente al convertir objetos más complejos, como el tipo de mapa o la fecha de formato. Al usar esta anotación, debe escribir una clase de adaptador para heredar la clase abstracta XmlAdapter e implementar los métodos en su interior.
+                <br><br>
+                @XmlJavaTypeAdapter (valor = xxx.class), el valor es la clase de adaptador definida por usted
+
+                XmlAdapter es el siguiente:
+              </td>
+              <td>
+                <img
+                src="../../../../../assets/framework/Jaxb/XmlAdapter.png"
+                alt="XmlAdapter"
+                title="XmlAdapter"><br><br>
+              </td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+</div>

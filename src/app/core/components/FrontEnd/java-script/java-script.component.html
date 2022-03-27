@@ -1,0 +1,910 @@
+<div class="container">
+    <table class="table table-striped table-hover table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Referencia</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>DOCUMENTACION</strong></td>
+                <td colspan="2" > <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">MOZILA DEVELOP NETWORD</a></td>
+            </tr>
+
+            <tr>
+                <td><strong>JavaScript</strong></td>
+                <td>
+                    <strong>Isomorfismo</strong><br><br>* Es el unico lenguaje que puede estar en el front, back y en la base de datos <br>* Debilmente tipado <br><br>En javaScript todo es un objeto <br><br>
+                    <br><strong>Gramatica</strong> <br><br>
+                    <strong>snake_case: </strong>mi_archivo_javascript.ts <br>
+                    <strong>UPER_CASE: </strong>UNA_CONSTANTE <br>
+                    <strong>UpperCamelCase: </strong>SerHumano <br>
+                    <strong>lowerCamelCase: </strong>unObejto <br><br><br>
+                    <strong>Ordenamiento de codigo</strong> <br><br>
+                    1. Importacion de modulos <br>
+                    2. Declaracion de variables <br>
+                    3. Declaracion de funciones <br>
+                    4. Ejecucion de codigo <br><br><br>
+                    <strong>DOM: Document Objet Model == es el api que tiene JavaScript en los navegadores para interacturar con el codigo HTML</strong> <br><br>
+                </td>
+                <td>
+                    palabras reservadas <br><br>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/ReserverWords.png"
+                    alt="ReserverWords"
+                    title="ReserverWords"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong><a href="https://es.wikipedia.org/wiki/Anexo:Comparativa_de_motores_de_renderizado">Motores de renderizado</a></strong><br><br>
+                    <strong>Just time compiler</strong>
+                </td>
+                <td colspan="2">
+                    Google saca chrome que corre con V8 <br>
+                    Microsoft saca edge que ya el motor esta siendo descontinuado <br>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/motores.png"
+                    alt="motores"
+                    title="motores"><br><br>
+                    <a href="https://kangax.github.io/compat-table/es6/">ver todos los motores de diferentes plataformas </a>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td><strong><a href="https://www.html5rocks.com/es/tutorials/internals/howbrowserswork/">Como funciona los navegadores</a></strong></td>
+                <td>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/hJavascript.png"
+                    alt="hJavaScript"
+                    title="hJavaScript"><br><br>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/hJavascript1.png"
+                    alt="hJavaScript1"
+                    title="hJavaScript1"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>javaScript</strong></td>
+                <td>
+                    En javaScript el objeto global es <strong>windows</strong> <br><br>
+                    En nodejs el objeto global es <strong>global</strong> <br><br>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/JavaScript2.png"
+                    alt="JavaScript2"
+                    title="JavaScript2"><br><br>
+                </td>
+                <td>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>TypeScript</strong></td>
+                <td>
+                    Es un super set de JavaScript es decir internamente esta es escrito en JavaScript pero TypeScript no lo reemplaza a JavaScript en totalidad quiere decir que algunas tareas definitivamente se deben hacer en JavaScript. <br>
+                    Los navegadores no entienden TypeScript es por ello que aunque angular tiene su codigo en TypeScript se requiere ser transpilado a JavaScript <br>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><strong>nodejs</strong></td>
+                <td>
+                    En nodejs el objeto global es <strong>global</strong> <br><br>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><strong>Primer paso</strong></td>
+                <td>
+                    1. Una vez que el cliente hace una peticion request al motor de renderizado este motor internamente lo primero que define es un <strong>entorno global</strong> donde define 3 cosas principalmento: <br><br>
+                    <strong>1. Objeto Global = windows </strong><br>
+                    <strong>2. this = windows </strong><br>
+                    <strong>3. Outer enviroment</strong>
+                </td>
+                <td>
+                    1.
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/ObjetoGlobal.png"
+                    alt="ObjetoGlobal"
+                    title="ObjetoGlobal"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://platzi.com/clases/1798-javascript-navegador/25683-profundizando-en-el-engine/">Segundo Paso</a></strong></td>
+                <td>
+                    2. Luego de definir el entorno global define un stack de tareas que debe realizar "Apila las tareas una sobre otras" <br><br>
+                    2.
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/stackTareas.png"
+                    alt="stackTareas"
+                    title="stackTareas"> <br><br>
+                    3. Luego de hacer lo anterior el motor de renderizado descarga, parsea, compila y ejecuta el <strong>archivo.js</strong><br><br>Como se puede ver en a grafica <strong>AST Abstract Syntax Tree</strong>: Es el arbol de keywords que el motor arma para entender la jerarquia de los elementos
+                </td>
+                <td>
+                    3.
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/javaScriptExecute.png"
+                    alt="javaScriptExecute"
+                    title="javaScriptExecute"><br><br>
+                    3.
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/pasosJavascript.png"
+                    alt="pasosJavascript"
+                    title="pasosJavascript"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><Strong><a href="https://platzi.com/clases/1798-javascript-navegador/25685-call-stack/">Consideraciones</a></Strong> </td>
+                <td>
+                    JavaScript solo puede realizar una tarea a la vez <br><br><br>
+                    Ahora <strong>memory heap: </strong>Es el lugar donde se van a almacenar la variables y las funciones del programa <br><br>
+                    y <strong>Call stack : </strong>Es la pila de tareas que debe realizar el programa, como se ve lo que primero se va a ejecutar es el objeto global y lo primero que sale es lo primero que entro es decir de abajo hacia arriba se van desarrollando <br><br><br>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/javaScriptSingle.png"
+                    alt="javaScriptSingle"
+                    title="javaScriptSingle"><br><br>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/memoryHeap.png"
+                    alt="memoryHeap"
+                    title="memoryHeap"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://platzi.com/clases/1798-javascript-navegador/25687-garbage-collection/">Garbage Collection</a></strong> </td>
+                <td>
+                    Limpia la memoria de los datos no utilizados para no sobrecargarla y seguir trabajando sin problemas. <br><br>El algoritmo Mark & Sweep hace referencia a cuando un tipo de dato se vuelve inalcanzable para el programa.
+                    Se toma una raíz la cual es el Objeto Global y a medida que el programa avanza, los objetos van creando o borrando referencias a sus raíces.
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://platzi.com/clases/1798-javascript-navegador/25688-stack-overflow/">Stack overflow</a></strong> </td>
+                <td>
+                    El stack overflow se genera cuando el call stack se llena completamente (pila de tareas) .Esto pasa cuando se genera o se trabaja con bucles infinitos, recurcividad y funciones.Entonces este entra en stack overflow. <br><br>Antes chrome se bloqueaba con un stack overflow ahora con un determinado numero de interactiones el puede determinar que puede causar un stack overflow y bloquea de manera automatica la funcion y no el navegador. <br>
+                </td>
+                <td>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://platzi.com/clases/1798-javascript-navegador/26015-javascript-runtime/">JavaScript Runtime</a></strong> </td>
+                <td>
+                    Todos las funciones predefenidas que puede hacer el <strong>navegador</strong> como setTimeOut() son llamadas APIS y todas estas las podemos encontrar en el siguiente <a href="https://developer.mozilla.org/en-US/docs/Web/API">link</a><br><br>
+                    El runtime de JavaScript es sincrono es decir solo puede ejecutar una tarea a la vez <br><br> <strong>PERO PEROOOOOO</strong> un efecto para ser asincrono es decir que son llevadas a cabo varias tareas a la vez es cuando <strong>JavaScript</strong> hace unas tareas y el <strong>navegador</strong> hace otras. aca cabe las apis que estan en link mas arriba funciones que el navegador es capaz de hacer. <br><br>
+
+                    Cuando en el call stack hay tareas que son del navegador javaScript se las delega para que este las lleve a cabo y javaScript continua con las demas tareas del call stack. <br><br>
+                    Taquería DeGranda presenta a: <br><br>
+                    Cocina = Navegador <br>
+                    taquero = JavaScript <br><br>
+                    🌮 - call stack : el taquero (órdenes rápidas) <br>
+                    👨‍🍳 - web APIs : la cocina<br>
+                    🌯 - callback queue : las órdenes preparadas<br>
+                    💁‍♂️ - event loop : el mesero<br>
+
+                    Event loop: siempre esta revisando u observando a ver si javaScripto o el navegador acaba una tarea para delegarles tareas pendientes <br><br>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/javaScriptRuntime.png"
+                    alt="javaScriptRuntime"
+                    title="javaScriptRuntime"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="https://www.youtube.com/watch?v=FCkhDBsXsFg"><strong>Coercion de tipos</strong></a></td>
+                <td>
+                    JavaScript internamente corrige tipos de variables para hacer operaciones es decir, puede operar entre un '2' + 10 = 12 (string)+(number), lo que no hacen otros lenguajes<br><br> Cuando son objetos, arrays o funciones <strong>(Cosas que nos tipos primitivos)</strong> no se pueden comparar por mas que sus valores de campo y clave sean los mismos esto es debido a que cuando se trata de comparar lo que entiende el programa es comparar <strong>ESPACIOS DE MEMORIA</strong> es por esto que siempre van a dar false, para solucionar esto es posible emplear <strong><u>dos formas</u></strong><br><br> <strong>1. JSON.stringify(objeto)</strong> convertir las claves y valores del objeto en un string <strong>"{{abrellave}}"nombre":"juan", "edad": 32 {{cierrallave}}" </strong><br><br> <strong>LODASH</strong> Es una libreria que tiene una funcion llamada - isEqual que intera todos los valores del objeto y tenermina si es igual o no
+                </td>
+                <td>
+                    <strong>Doble igual </strong>: ==  <u>Operador de igualdad debil</u> <br><br>
+                    <strong>Tripe igual </strong>: === <u>Operador de igualdad estricta</u> (cuando son con tipos primitivos= compara si es el mismo valor y el mismo tipo)/ <u>Operador de identidad</u> (cuando son objetos = compara ademas si es el mismo espacio de memoria)
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://jherax.wordpress.com/2014/07/05/javascript-coercion/">Coercion</a></strong></td>
+                <td>
+                    <strong>Coercion implicita </strong>: Cuando el lenguaje por si solo realiza la intretacion de la variable <br><br>
+                    <strong>Coercion explicita </strong>: Cuando el programador determina el tipo de variable  <br><br><br>
+                    <strong>Coerción a números</strong> <br><br>
+                    El operador <strong>unario</strong> +(plus) se puede utilizar para convertir un string a number, si dicho string representa un número en su totalidad, de lo contrario devuelve NaN (Not A Number). <br><br>
+                    1. n = +"13";  //  13, type: number <br>
+                    2. n = +"0";   //   0, type: number <br>
+                    3. n = +"5px"; // NaN, type: number <br><br>
+                    Las funciones parseFloat() y parseInt(), operan de una forma muy similar, pero con una diferencia respecto al operador unario +, y es que los métodos antes mencionados convierten los primeros dígitos numéricos de un string a su representación numérica, aunque ese string no esté compuesto en su totalidad por números: <br><br>
+                    1. n = +"12px"; // NaN, type: number <br>
+                    2. n = parseFloat("12px"); // 12, type: number <br><br>
+                    <strong>Coerción en objetos</strong> ver mas tipos de coercion en la palabra principal o en el siguiente <a href="https://www.etnassoft.com/2011/04/06/coercion-de-datos-en-javascript/">enlace</a> o en <a href="https://platzi.com/clases/1814-basico-javascript/26298-coercion/">platzi </a><br><br>
+                </td>
+                <td>
+                    sumar = <strong>Number</strong>(valor1) + valor2 //pasar de string a Number <br><br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Coercion</a> <br><br>
+                    let a = 20;  let b= <strong>String</strong>(a) // pasar de number a string <br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>versiones </td>
+                <td>
+                    node = node -v <br>
+                    npm = npm -v <br>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>interar </td>
+                <td>
+                    Objeto {{abrellave}} {{cierrallave}} no se puede <br>
+                    Array [ ] si se puede (a diferencia en Java que los arrays son tratados como objetos) <br>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><a href="https://www.youtube.com/watch?v=o3c8cW73weQ&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=12"><strong>Array</strong></a></td>
+                <td>
+                    Trabajo con arrays en javaScript podemos tener un array con elementos de varios tipos<br><br>
+                    const a = ["Uno", 1, true, ["casa","perro","gato"], "mazana"]; <br><br>
+                    console.log(a[2]); //true <br>
+                    console.log(a[3][1]); //perro <br> <br>
+                    Puede ser definido con let o const pero se recomienda const pues es una constante que no va a cambiar, es decir se le puede agregar o quitar elementos pero siempre van a se un array. <br>
+                </td>
+                <td>https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_pop</td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Indexed_c">Array</a></strong></td>
+                <td>tambien informacin detallada en <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array">link</a></td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td><strong><a href="https://www.youtube.com/watch?v=4xig5UPRC00&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=13">Objeto</a></strong></td>
+                <td>
+                    Un objeto es una coleccion de llave valor
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><strong>Hoisting</strong></td>
+                <td>
+                    Si definimos una variable con <strong>var</strong> la podemos ver en windows "cuando imprimes windows por consola" y si definimos la variable con <strong>let </strong> no aparece en windows queda en <strong>scope</strong> donde fue definida. <br><br>
+                    en versiones de EcmaScript 6 hacia atras solo existia <strong>var</strong> ya en nuevas versiones encontramos <strong><a href="https://www.youtube.com/watch?v=cTfGyVFrLxQ"> let y const : entrando a TEMPORAL DEAD ZONE </a></strong> y con esto ya no <strong>genera un Hoisting </strong><br><br>
+                    <strong>TEMPORAL DEAD ZONE </strong> o zona muerta temporal = Es una region donde se ubican las variables que aun no se pueden acceder porque en la ejecucion del programa aun no han sido declaradas <br><br>
+                    <strong>tanto var, let y const son elevaadas PEROOOOOOOO</strong> la  diferencia radica que let y const entran a esta zona temporalmente muerta hasta que sean inicializadas y dara error y se detiene la ejecucion del programa si se leen antes de inicializarse, pero con var si se intentan leer antes de inicializarse solo dara undefined y no se detiene la ejecucion del programa. <br>
+                </td>
+                <td>
+                    Las funciones tambien son elevadas y se puede interpretar una funcion antes de encontrar su definicion <br><br>Precisamente un error de hoisting es llamar una funcion o una varaible que aun no ha sido inicializada.
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>datos</strong></td>
+                <td>
+                    Cuando se consulta variables <strong>primitivas: </strong>Se accede a su valor <br>
+                    Cuando se consula variables <strong>compuestos o complejos: </strong>Se accede a su referencia donde esta su valor <br>
+                    <br><br>
+                    <strong>const</strong><br><br>
+                    Si definimos una variable primitiva con <strong>const </strong><br><br>
+                    1. Tiene que estar inicializada en la misma linea donde es declarada <br>
+                    2. Su valo no se puede re-definir lineas despues <br><br>
+                    <strong>PERO PERO ...</strong> <br><br>
+                    Lo anterior no aplica para variables compuestas o complejas y esto es debido a que la referencia de su ubicacion no cambia de hecho sigue siendo el mismo espacio de memoria que se reservo en un principio sus atributos, caracteristicas o propiedades si es un objeto o un array lo que sea puede cambiar. <br><br> (por agragar o quitar elementos no va a dejar de ser un array, objeto o cualqueir otro tipo de valor compuesto o complejo) <br>
+                </td>
+                <img
+                src="../../../../../assets/FrontEnd/JavaScript/javaScript.png"
+                alt="javaScript"
+                title="javaScript"><br><br>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://www.sitepoint.com/javascript-truthy-falsy/">Valores: Truthy y Falsy</a> </strong></td>
+                <td>
+                    valores que por default son true o false
+                </td>
+                <td>
+                    <strong>The following values are always falsy: </strong><br>
+                    false<br>
+                    0 (zero)<br>
+                    -0 (minus zero)<br>
+                    0n (BigInt zero)<br>
+                    ' ', " ", ` ` (empty string)<br>
+                    null<br>
+                    undefined<br>
+                    NaN<br><br>
+                    <strong>Everything else is truthy. That includes:</strong><br>
+                    '0' (a string containing a single zero)<br>
+                    'false' (a string containing the text “false”)<br>
+                    [ ] (an empty array)<br>
+                    {{abrellave}} {{cierrallave}} (an empty object)<br>
+                    function(){{abrellave}} {{cierrallave}} (an “empty” function)<br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Paradigma Funcional</td>
+                <td>
+                    Esta filosofia esta orientada a: <br><br>
+                    1. No <strong>MUTAR LAS VARIABLES CUANDO SON LLAMADAS EN FUNCIONES</strong>: Esto quiere decir que en vez de modificar variables se cree unas nuevas dentro de las funciones para que de esta manera nuestro codigo sea facil al no tener distintos valores para las varaibles dentro de nuestro codigo <br><br>
+                    2. Dentro de este paradigma podemos suponer que se dispone de un monton de memoria<br>
+                </td>
+                <td>
+                    <strong>Funciones =</strong>Son ciudadanas de 1° Orden  <br><br>
+                    <strong><a href="https://www.youtube.com/watch?v=H6U1Pm7x60E&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=11">hay dos tipos de funciones</a></strong> <br><br>
+                    <strong>1. funciones declaradas: </strong>Una funcion normal como la conocemos<br>
+                    <strong>2. funciones expresadas: </strong>Cuando el valor de una variable esta definida por una funcion, esta funcion <strong>No se puede llamar antes de la variable</strong> solo despues de definirla en la variable puede ser llamada <br><br> Es decir la funcion declarada puede ser llamada antes y despues de su definicion y la expresada solo puede ser llamada despues de su definicion <br><br>
+                    <strong>Funciones de Orden superior </strong>: <br> 1. Variables que su valor esta definido por una funcion <br>2. Funciones que reciben por parametro otra funcion <br>3. Funciones que como resultado de su ejecucion retornan otra funcion <br> <br>
+                    <strong>map, filter y reduce son de orden superior NO MODIFICAN EL ARRAY ORIGINAL</strong>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="https://www.youtube.com/watch?v=tP8JiVUiyDo&t=383s">Funciones Puras</a></td>
+                <td>
+                    1. Funciones que al ser invocadas con los mismos argumentos siempre producen el mismo valor <br><br>
+                    2. No producen efectos secundarios (que al ser ejecutas no alteran el estado del programa y no alteran ninguna variable externa) <br><br>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Default_parameters">Paso de Parámetros</a>
+                </td>
+                <td>
+                    pueden ser: <br><br>1. Predeterminados <br>2. Opcionales</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://www.youtube.com/watch?v=arOXcy7K4XQ&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=7">templete string</a> <br><br> ``</strong></td>
+                <td>Con acento invertido o back tick o acento grave <strong>` ${{abrellave}} {{cierrallave}}` </strong><br><br>Como es posible de identificar con templete string respeta la sangria o tabulacion ademas nos permite escribir codigo en varias lineas con doble comillas o comillas sensillas debemos usar contatenacion de string para varias lineas <br><br>
+                    <img
+                        src="../../../../../assets/FrontEnd/JavaScript/templeteString2.png"
+                        alt="templeteString2"
+                        title="templeteString2">
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/templeteString.png"
+                    alt="templeteString"
+                    title="templeteString"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://www.youtube.com/watch?v=SPVL8uAezaw&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=17">Errores</a></strong></td>
+                <td>
+                    hay un error o no el bloque <strong>finaly</strong> siempre se va a ejecutar <br><br>
+                    Se pueden lanzar errores personalizados un ejemplo es que se este esperando un dato de cierto tipo y el usuario ingresa un dato erroneo o de un tipo diferente en este caso puedo lanzar un error.<br>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/errores.png"
+                    alt="errores"
+                    title="errores"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>.map()</strong></td>
+                <td>
+                    NO PUEDE EJECUTAR FUNCIONES ASINCRONAS <strong>(solo sincronas)</strong> <br><br>
+                    1. Cuando tenemos un array y queremos obtener uno nuevo ver <strong>Retornos temprano</strong> En este apartado se ejemplifica el hecho de obtener un nuevo array apartir de uno ya existente. <br><br>
+                    2. Cuando queremos <strong>Extraer datos de un objeto</strong> creamos un nuevo objeto, aplicamos arrows funcions ya sea de cualquera de las dos formas siguientes <br><br>
+                </td>
+                <td>2.1
+                    <img src="../../../../../assets/FrontEnd/JavaScript/ExtraerMap.png" alt=""> <br><br>
+                    2.2
+                    <img src="../../../../../assets/FrontEnd/JavaScript/ExtraerMap2.png" alt=""><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Retornos temprano</td>
+                <td>
+                    Esto es una tecnica que es sacar lo que no nos intera en primer lugar <br><br>
+                    para el ejemplo de la figura queremos aplicar un descuento a los productos que cuestan mas de 1000 tenemos un array de productos y necesitamos modificar el tercer atributo <br><br>
+                    1. Entonces guardamos en un nuevo array la salida y con la funcion transformadora .map tomamos cada elemento del array  <br><br>
+                    2. La segunta imagen es la forma equivocada de modificar el tercer atributo del objeto que nos interesa: esto es porque 1° Modificamos el array original y 2° es que efectivamente SI modificamos el atributo que nos interesaba <strong>PEROOOO NO LO ESTAMOS RETORNANDO </strong>y esto es un error pues al consultar el array solo va a mostrar los valores que retornaron y saldra UNDEFINED a los campos que no tienen valor<br><br>
+                    3. la tercera es la manera correcta de hacer el trabajo, esto es un objeto completamente nuevo con la linea <strong>12</strong> hacemos una copia de un obejto ya existente y a los campos precio le aplicamos nuestra operacion <br>
+                </td>
+                <td>1.
+                    <img src="../../../../../assets/FrontEnd/JavaScript/returnEarly.png" alt=""> <br><br>
+                    2.
+                    <img src="../../../../../assets/FrontEnd/JavaScript/wrongReturn.png" alt=""><br><br>
+                    3.
+                    <img src="../../../../../assets/FrontEnd/JavaScript/CorrectWay.png" alt=""><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>.map()</strong></td>
+                <td>1. Asignamos a un array los valores devultos de .map</td>
+                <td>
+                    1.
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/map2.png"
+                    alt="map2"
+                    title="map2"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>.filter()</strong></td>
+                <td>
+                    Este nos ayuda a crear un nuevo array con nuevos elementos apartir de uno ya existente <strong>PERO</strong> configurando un filtro para seleccionar de acuerdo a X condiciones <br><br>Para este ejemplo la funcion anonima se declara como predicado en otra variable y la variable es llamada como parametro. <br><br>En la imagen 2 sacamos en caso contrario <br><br>3. Tambien es usado para sacar los elementos repetidos de un array aprovechando su tercer parametro del predicado <br><br>a = variable x para nombrar a los elementos. <br>b = la posicion en caso de querer trabajar con una posicion especial si es de esta manera y no interesa llamar a los elementos se puede usar "_" guion bajo. <br>c= El nombre del array que queremos trabajar. <br><br> indexOf es usado para asignar un numero de posiciones a los elementos y como la posicion 4 y 5 los valores 3 y 1 ya tienen un indexOf <strong>No son agregados al nuevo array</strong>
+                </td>
+                <td>1
+                    <img src="../../../../../assets/FrontEnd/JavaScript/filter.png" alt=""><br><br>
+                    2
+                    <img src="../../../../../assets/FrontEnd/JavaScript/filter2.png" alt=""><br><br>
+                    3
+                    <img src="../../../../../assets/FrontEnd/JavaScript/filter3.png" alt=""><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://platzi.com/clases/1814-basico-javascript/26308-metodos-de-recorridos-de-arrays/">.filter()</a></strong></td>
+                <td>
+                    1. filtrar del array del objetos original saco uno o varios empleamos a una varaible <strong>tambien de tipo array</strong> con filter()
+
+                </td>
+                <td>
+                    1.
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/filter4.png"
+                    alt="filter4"
+                    title="filter4"><br><br>
+                    1.
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/filter5.png"
+                    alt="filter5"
+                    title="filter5"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Reduce</strong></td>
+                <td>
+                    Funciona como prensa: requiere un valor inicial y con cada interaccion el array se va haciendo mas pequeño hasta reducirlo a un solo elemento
+                    <br><br><strong>la funcion reduce recibe 2 parametros(la funcion anonima, el valor del acumulador)</strong>
+                    <br><br>El valor inicial puede ser 0 pero si no lo indica va a tonar el valor de la primera posicion del array que en este caso es 3 <br><br>2. forma corta <br><br>3. Tambien podemos poner como predicado la funcion anonima en una variable para despues llamarala como argumento o parametro del filter<br><br>4. Si el array esta vacio da error para que el programa no de error al ejecutarlo declaramos un <strong>if ternario que en caso de estar vacio el array asigne un 0 y al final el filter da 0 y el programa no se continua</strong>
+                </td>
+                <td>1
+                    <img src="../../../../../assets/FrontEnd/JavaScript/reduce.png" alt=""><br><br>
+                    2
+                    <img src="../../../../../assets/FrontEnd/JavaScript/reduce2.png" alt=""><br><br>
+                    3
+                    <img src="../../../../../assets/FrontEnd/JavaScript/reduce3.png" alt=""><br><br>
+                    4
+                    <img src="../../../../../assets/FrontEnd/JavaScript/reduce4.png" alt=""><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>.find()</strong></td>
+                <td>Encontrar un elemento dentro de un array</td>
+                <td>
+                    <img src="../../../../../assets/FrontEnd/JavaScript/find.png" alt=""><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>.find()</strong></td>
+                <td>
+                    Encontrar un elemento dentro de un array si existe se carga dentro de la variable si no pues la varaible no se va a cargar recordar que todo lo que devulven estas funciones son nuevos arrays
+                </td>
+                <td>
+                    <img src="../../../../../assets/FrontEnd/JavaScript/find2.png" alt=""><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://www.youtube.com/watch?v=o3c8cW73weQ&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=12">.ForEach()</a></strong></td>
+                <td>
+                    No genera un nuevo array, no modifica el array original, ademas empleamos el <strong>index</strong> del for  <br><br>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/forEach2.png"
+                    alt="forEach2"
+                    title="forEach2"><br><br>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/forEach.png"
+                    alt="forEach"
+                    title="forEach"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>.some()</strong></td>
+                <td>
+                    Retorna verdadero o falso de acuerdo a una validacion a elementos del objeto <br><br>
+                    Si alguno de los elementos cumple con la condicion retorno true sino false
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/some.png"
+                    alt="some"
+                    title="some"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://www.youtube.com/watch?v=9h5hyh_wDjo&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=15">if</a></strong></td>
+                <td>
+                    Operador Ternario
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/operadorTernario.png"
+                    alt="operadorTernario"
+                    title="operadorTernario"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://www.youtube.com/watch?v=9h5hyh_wDjo&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=15">Switch</a></strong></td>
+                <td>
+
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/switch.png"
+                    alt="switch"
+                    title="switch"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://www.youtube.com/watch?v=AapgtR0Rwk0&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=16">for</a></strong></td>
+                <td>
+                    1. for simple <br>
+                    2. for mejorado (<strong>for in</strong> y <strong>for of</strong>)o simplificados. <br>
+                </td>
+                <td>1.
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/for1.png"
+                    alt="for1"
+                    title="for1"><br><br>
+                    2.
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/for2.png"
+                    alt="for2"
+                    title="for2"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://www.youtube.com/watch?v=AapgtR0Rwk0&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=16">for in</a></strong></td>
+                <td>
+                    <strong>for in: </strong> me permite recorrer un objeto <br><br>
+                    Ahora podemos ver la definicion de un objeto y empleando un ciclo for of podemos sacar por pantalla sus <strong>llave y valor.....PEROOOOO</strong> precisamente la razon por la cual se muestra la imagen A y B es para mostrar que en este caso con la notacion del punto no es posible sacar el valor de la llave y es por ello que es necesario emplear la notacion de los <strong>[ ]</strong><br><br>
+                </td>
+                <td>
+                    A.
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/forOf1.png"
+                    alt="forOf1"
+                    title="forOf1"><br><br>
+                    B.
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/forOf2.png"
+                    alt="forOf2"
+                    title="forOf2"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://www.youtube.com/watch?v=AapgtR0Rwk0&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=16">for of</a></strong></td>
+                <td>
+                    <strong>for of: </strong> me permite recorrer cualquier valiable que sea interable, incluso si es primitivo como un string <br><br>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/forOfString.png"
+                    alt="forOfString"
+                    title="forOfString"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://www.youtube.com/watch?v=AapgtR0Rwk0&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=16">while</a></strong></td>
+                <td>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/while2.png"
+                    alt="while2"
+                    title="while2"><br><br>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/while.png"
+                    alt="while"
+                    title="while"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong><a href="https://www.youtube.com/watch?v=AapgtR0Rwk0&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=16">Do while</a></strong></td>
+                <td></td>
+                <td>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/doWhile.png"
+                    alt="doWhile"
+                    title="doWhile"><br><br>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td><strong><a href="https://www.youtube.com/watch?v=4xig5UPRC00&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=14">Objeto</a></strong></td>
+                <td>
+                    1. Definicion de un objeto <br>
+                    2. Definicion de su constructor y la instanciacion o ejemplificacion del objeto.<br> <br><br>
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/Object2.png"
+                    alt="Object2"
+                    title="Object2"><br><br>
+                    console.log(jon.pasatiempos[1]); //Hacer ejercicio <br>
+                    console.log(jon.contacto.twitter); //@jonmicrcha <br>
+                    jon.saludar(); //Hola:) <br><br><br><strong>
+                    console.log(Obejct.keys(jon)); //lista las propiedades del objeto<br>
+                    console.log(Obejct.values(jon)); //pone en un array las propiedades del objeto<br>
+                    console.log(jon.hasOwnProperty("nombre")); //Da true or false si tiene esta propiedad el objeto<br>
+                    </strong>
+                </td>
+                <td>
+                    1.
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/objeto.png"
+                    alt="objeto"
+                    title="objeto"><br><br>
+                    2.
+                    <img
+                    src="../../../../../assets/FrontEnd/JavaScript/objeto2.png"
+                    alt="objeto2"
+                    title="objeto2"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

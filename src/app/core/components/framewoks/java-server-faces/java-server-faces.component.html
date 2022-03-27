@@ -1,0 +1,554 @@
+<div class="container">
+  <table class="table table-striped table-hover table-bordered align-middle">
+      <thead>
+          <tr>
+              <th scope="col">Referencia</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">Ejemplo</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td></td>
+            <td>
+              * <strong>Componentes de interfaz de usuario IU</strong> <br>
+              - Componetes que generan datos <br>
+              -- No editables <br>
+              -- editables <br><br>
+              - Componentes que generan acciones <br><br>
+              * <strong>Un modelo de renderizado</strong> <br><br>
+              * <strong>Un modelo para el manejo de eventos y listeners</strong><br>
+              JSf Maneja 2 tipos de eventos <br><br>
+              -Eventos de Aplicacion <br>
+              --Generados por componentes UI <br>
+              --Hay 2 tipos: ActionEvent o Value Change Event <br><br>
+              -Eventos de Ciclo de Vida <br>
+              --Se clasifican en Eventos de Fase y Eventos de Sistema <br><br>
+              * <strong>Un modelo de conversion y validacion de datos</strong> <br><br>
+              * <strong>Un modelo para el soporte Ajax</strong> <br><br>
+            </td>
+            <td>
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/EventsAndListeners.png"
+              alt="EventsAndListeners"
+              title="EventsAndListeners"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="https://www.youtube.com/watch?v=dZnXn-ecwp8&t=29s">Info proyecto JSF</a><br><br>
+              <strong>Todo proyecto JSF debe tener un archivo de web.xml </strong> EN el encontramos los servlet y mas importante en los tags de servlet name y mapping encontramos el servlet el <strong>Faces Servlet</strong> de esta manera indicamos que nuestra aplicacion usa JSF ademas <strong>que debemos agregar la dependencia necesario en el pom.xml y build.gradle <br><br> como visto en la imagen 2</strong>
+            </td>
+            <td>
+              * Es una especificacion, parte de Java EE que define un marco de trabajo MVC pare el desarrolo de aplicaciones web basado en un modelo de componentes de interfaz de usuario del lado del servidor <br>
+              * JSF nacio en el 2004 por SUN pensado para la parte web. <br>
+              * Permite el uso de JavaScript <br>
+              * Resuelve Validaciones, Conversiones, Mensajes de error e Internacionalizacion <br>
+              * Desarrollo de componentes propios <br>
+              * La presentacion esta en JSP y XHTML <br>
+              * <strong>Programacion orientada a eventos</strong><br>
+              * <strong>Etiquetas enriquezidas </strong>por lado del servidor para que en el lado del cliente tenga <strong>HTML</strong>
+              * <strong>Flujos de navegacion</strong> en base a cadenas de control. Estos flujos es poaible definirlos desde java o con un archivo llamado <strong>faces-config</strong> siendo esta ultima mejor ya que en un solo archivo se centraliza la navegacion de la aplicacion <br>
+              * <strong>Soporte de peticiones asincronas (AJAX)</strong> todos los frameworks que programan aplicaciones web como spring web y JSF tienen mejorado esta parte de comunicacion entre el servidor y el cliente <br>
+              * JSF es la tecnologia que avala <strong>Oracle</strong> para las apliaciones web es por ello que este framework tiene soporte nativo para <strong>WebSphere y GlassFish </strong>lo que significa que no es necesario agregar librerias a nuestro servidor ya que este ya las contiene <br>
+              * facil integracion con standalone en Apache Tomcat solo es necesario agregar las librerias necesarias <br>
+            </td>
+            <td>
+              1.
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/EstructuraJSF.png"
+              alt="EstructuraJSF"
+              title="EstructuraJSF"><br><br>
+              2.
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/ConfiguracionJSF.png"
+              alt="ConfiguracionJSF"
+              title="ConfiguracionJSF"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Archivos</td>
+            <td>
+              <strong>faces-config.xml (META-INF) </strong><br>
+              * Contine las reglas de navegacion <br>
+              * la configuracion de Internacionalizacion <br>
+              * Antes en JSF-1 este archivo se mapeaban los beans ademas de la ruta y su Scope <br>
+              <strong>web.xml (WEB-INF)</strong><br>
+              * Contiene los Servlets (name y el mapping) <br>
+              * El archivo por el cual arranca la aplicacion <br>
+              <strong>Pom.xml  (Project Object Model)</strong> <br>
+              * Contiene la inyeccion de todas las dependencias necesarias para que funcione el proyecto <br>
+              * La version del proyecto <br>
+              * El nombre del proyecto <br>
+              * El paquete que dara por salida <br>
+            </td>
+            <td>
+              En versiones JSF-1
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/JSF-1MapeoDeJavaBeans.png"
+              alt="1MapeoDeJavaBeans"
+              title="1MapeoDeJavaBeans"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+              <td>Java Server Faces</td>
+              <td>
+                Java server faces es un framework de aplicaciones web basado en java, permite simplificar la construcción de interfaces de usuario para aplicaciones web mediante el uso de componentes gráficos y la vinculación del patrón MVC <br><br>
+                Dentro de las caracteristicas descritas en la segunda imagen se menciona una capa superior <strong>Java API los servlet</strong> esto quiere decir que todo lo que hagamos con Java para la web va a emplear servlets en segundo plano, lo que hagamos con Spring, JSF etc.. <br><br>
+                <strong>
+                JSF es una especificación o framework que hace parte de JEE que define un marco de trabajo MVC para el desarrollo de aplicaciones web basado en un modelo de componentes de interzas de usuario del lado del servidor <br><br></strong>
+                <strong>JSF</strong>: Java Server Faces usa JSP, una de las diferencias entre JSP y JSF es que JSF todo son formularios y JSP son link <strong>para el redireccionamiento</strong><br>
+                <strong>JSP</strong>: Java Server Pages = Es una tecnologia orientada a crear paginas web con programacion Java en el Servidor, estas estan compuetas con HTML/XML mezclado con etiquetas especiales para programar scripts de servidor en sintaxis java <br><br>
+                <strong>ASP</strong>: Active Server Pages = Es una plataforma de desarrollo creada por Microsoft <strong>usado para el desarrollo de las tecnologias de servidor</strong> lo anterior significa que lo que desarrollemos en PHP, ASP, JSF, JSP son paginas que estan dentro del servidor y que son dinamicas es decir solo van a generar HTML para que el navegador interprete y renderize <strong>Solo con la informacion necesaria</strong> <br><br>
+                <strong>ASP.NET</strong>: no es lo mismo ASP que ASP.NET, lo segundo es la evolucion de lo primero ademas ASP solo permite programar en Visual Basic en cambio ASP.NET permite varios lenguajes como C# <br><br>
+                Tal y como veíamos en la sesión anterior, y definiéndolo de una forma muy simple, JSF es un framework orientado a recoger datos del usuario, pasarlos a la capa del modelo de la aplicación, realizar las acciones correspondientes en la aplicación y pintar los datos resultantes. Todo ello en un entorno web, con peticiones HTTP y páginas HTML.
+                <br><br>
+                Los datos se introducen y se muestran en forma de texto, y se almacenan en un formato dependiente de la aplicación. Por ejemplo, una fecha se puede representar con un formato dd-mm-aaaa mientras que su representación interna puede ser un objeto de la clase java.util.Date . Para realizar esta conversión entre el texto y el formato interno, se asocian al componente validadores y conversores .
+                ver info <a href="https://desarrolloweb.com/articulos/831.php">Link 1</a>
+              </td>
+              <td>
+                1.
+                <img
+                src="../../../../../assets/framework/JavaServerFaces/Servlet.png"
+                alt="Servlet"
+                title="Servlet"><br><br>
+                2.
+                <img
+                src="../../../../../assets/framework/JavaServerFaces/JSF1.png"
+                alt="JSF1"
+                title="JSF1"><br><br>
+              </td>
+          </tr>
+
+          <tr>
+              <td>Arquitectura</td>
+              <td>
+                los clientes hacen request estas entran a los controladores(los Managed Beans) estos delegan roles a los modelos, un modelo detecta y devuelve el controlador el controlador genera una vista y esta vista va a estar amarrada al modelo para dar finalmente un response al cliente <br><br>
+              </td>
+              <td>
+                <img
+                src="../../../../../assets/framework/JavaServerFaces/JSFArquitectura.png"
+                alt="JSFArquitectura"
+                title="JSFArquitectura"><br><br>
+              </td>
+          </tr>
+
+          <tr>
+              <td>Ciclo de vida</td>
+              <td>
+                Empieza desde el Faces Request hasta el Faces Response <br><br>
+                Restore view en esta etapa se restaura el arbol de componentes botones, inputs , form etc.. una vez obtenido el arbol de componetes se procesan todos los valores a sociados a los mismos, se validan datos actualiza los modelos este paso pasa primero por los controladores finalmente invoka la aplicacion llamando al gestor que es el <strong>Java Bean </strong>Este se encarga de traer todos los componentes asociados en conjunto con la informacion que viene los objetos para renderizarla en un navagador por medio de un servidor que para nuestro caso es Tomcat <br><br>
+                Primero dectecta el evento de la persona que esta interactuando en la pagina y por medio del protocolo HTTP crea el FacesRequest llega al motor JSF recupera la informacion atraves de los Beans, crea el arbol de componentes genera el archivo xml con los datos lo lleva a nuestra pagina a nuestro navegador y atraves del DOM y con ayuda de JavaScript y JavaServerFaces pinta la informacion <br><br>
+                <strong>Un servlet de la clase javax.faces.webapp.FacesServlet es el motor de cualquier aplicación JSF</strong><br><br>
+                <img
+                src="../../../../../assets/framework/JavaServerFaces/JSFCicloVida0.png"
+                alt="JSFCicloVida0"
+                title="JSFCicloVida0"><br><br>
+              </td>
+              <td>
+                1.
+                <img
+                src="../../../../../assets/framework/JavaServerFaces/JSFCicloVida.png"
+                alt="JSFCicloVida"
+                title="JSFCicloVida"><br><br>
+                2.
+                <img
+                src="../../../../../assets/framework/JavaServerFaces/JSFCicloVida2.png"
+                alt="JSFCicloVida2"
+                title="JSFCicloVida2"><br><br>
+              </td>
+          </tr>
+
+          <tr>
+            <td>Facelets Context</td>
+            <td>
+              <strong>P.E Process Event parametros del Envarioment </strong> los facelets son templates de html con xml = xhtml que tiene tags de contenido dinamico quien llena este contenido es el cliente
+            </td>
+            <td>
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/JSFFacesContext.png"
+              alt="JSFFacesContext"
+              title="JSFFacesContext"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Funcionamiento General</td>
+            <td>
+              Empieza por el faces request luego se crea el FacesServlet <strong>declarado en el archivo web.xml </strong>se genera su FacesContext este crea una instancia unica por cada request luego FacesServlet delega el procesamiento al ciclo de vida luego cada fase puede acceder y modificar su contenido en el FacesContext luego envia la respesta al FacesServlet y este ultimo solicita al FacesContext ejecutar la fase de render response para finalmente generar el Faces response <br><br>
+              Ahora tener en cuenta que en el archivo de Web.xml <strong>Web Deployment Definition (es un fichero en el formato estándar para aplicaciones web con servlets, que contiene la configuración global a toda(s) la(s) aplicacion(es) )</strong> Se encuentra definidos los servlets faces : <br><br>
+              1. La definition = {{abreDiamante}}servlet{{cierraDiamante}} <br>
+              2. El Mapping = {{abreDiamante}}servlet-mapping{{cierraDiamante}} <br>
+            </td>
+            <td>
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/JSFGeneral.png"
+              alt="JSFGeneral"
+              title="JSFGeneral"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+              <td>Anotaciones</td>
+              <td>
+                los controllers son llamados de diferente manera dependiendo del framewok usado <br><br>
+                los controladores en JSF son <strong>managed Beans</strong><br>
+                los controladores en Spring son <strong>Controllers</strong> <br>
+                los controladores en Stratus son <strong>...</strong> <br>
+              </td>
+              <td>
+                <img
+                src="../../../../../assets/framework/JavaServerFaces/SettingJSF.png"
+                alt="SettingJSF"
+                title="SettingJSF"><br><br>
+              </td>
+          </tr>
+
+          <tr>
+            <td>ManagedBean //Anotaciones</td>
+            <td>
+              * Clases Java de respaldo para las operaciones a realizar en las paginas web, que soportan la logica del negocio <br>
+              * Requieren ser invocados con la expresion <strong>EL = {{abrellave}}#bean.atributo{{cierrallave}}</strong>
+              * Esta clase debe estar mappeada en un archivo de configuracion "faces-config.xml"(JSF 1) o atraves de anotaciones (JSF 2+) <br>
+              * Dicho lo anterior este archivo de configuracion contiene la caracterizacion del comportamiento, la ubicacion y los datos de la clase los tag: <br><br>
+              <strong>managed-bean :</strong> Es un apodo o alias a la clase que vamos a mapear <br><br>
+              <strong>managed-class :</strong> Es la ruta en donde esta ubicada la clase <br><br>
+              <strong>managed-scope :</strong> Describimos el ambito de la clase, ademas el comportamiento, <br><br>
+              <strong>navigation-rule :</strong> Son las reglas de navegacion debemos indicar que salida dara la pagina y despues indicar hacia donde se debe dirigir <br><br>
+
+            </td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Managed Bean <strong>Modelo</strong></td>
+            <td>
+              Hay dos maneras de configurar los Managed Bean <br><br>
+            </td>
+            <td>
+              1.
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/JSFManagedBean.png"
+              alt="JSFManagedBean"
+              title="JSFManagedBean"><br><br>
+              2.
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/JSFManagedBean2.png"
+              alt="JSFManagedBean2"
+              title="JSFManagedBean2"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Scope</td>
+            <td>El alcance</td>
+            <td>
+              <strong>@ViewScope</strong> Que el alcance del Bean a a ser a nivel de vista en el momento que el usuario de refresh a la pagina los datos del Bean <strong>desaparecen: Se Destruyen el ManagedBean y se crea uno nuevo</strong>
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/JSFScope.png"
+              alt="JSFScope"
+              title="JSFScope"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Navegacion</td>
+            <td>
+              hay dos formas de navegar entre las vistas del proyecto de manera explicita e implicita
+            </td>
+            <td>
+              1.
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/JSFNavegacionExplicito.png"
+              alt="JSFNavegacionExplicito"
+              title="JSFNavegacionExplicito"><br><br>
+              2.
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/JSFNavegacionImplicito.png"
+              alt="JSFNavegacionImplicito"
+              title="JSFNavegacionImplicito"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+              <td>Librerias</td>
+              <td>
+                para usar de mejor manera podemos emplear diferentes librerias como las mencionadas en la imagen puedes encontrar un poco mas de informacion dentro de este proyecto en el apartada de librerias
+              </td>
+              <td>
+                1.
+                <img
+                src="../../../../../assets/librerias/primefaces/libreriasParaJSF.png"
+                alt="libreriasParaJSF"
+                title="libreriasParaJSF"><br><br>
+                2.
+                <img
+                src="../../../../../assets/framework/JavaServerFaces/libreriasJSF.png"
+                alt="libreriasJSF"
+                title="libreriasJSF"><br><br>
+              </td>
+          </tr>
+          <tr>
+              <td><a href="http://codejavu.blogspot.com/2017/12/componentes-basicos-java-server-pages.html">Etiquetas</a></td>
+              <td>
+                * h:commandLink action="la pagina a la cual debe redireccionar" value="el texto a mostrar"// link <br>
+
+              </td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td><a href="https://www.adictosaltrabajo.com/2016/06/10/facelets-entendiendo-los-templates-de-jsf/"></a>Facelets</td>
+              <td>
+                El template será para nosotros una hoja de papel ya escrita, con una serie de agujeros que nos permiten ver lo que hay debajo. El cliente será otra hoja que pondremos debajo y del que solo veremos el contenido que no tape el template.
+              </td>
+              <td>
+                <img
+                src="../../../../../assets/framework/JavaServerFaces/facelets.png"
+                alt="facelets"
+                title="facelets"><br><br>
+              </td>
+          </tr>
+
+          <tr>
+            <td>Etiquetas</td>
+            <td>
+            </td>
+            <td>
+              <img
+              src="../../../../../assets/framework/JavaServerFaces/Etiquetas.png"
+              alt="Etiquetas"
+              title="Etiquetas"><br><br>
+            </td>
+          </tr>
+
+          <tr>
+              <td><a href="https://stackoverflow.com/questions/17544141/purpose-of-the-houtputlabel-and-its-for-attribute">Diferencia entre outputLabel y outputText</a></td>
+              <td>
+                La diferencia radica en el HTML generado label puede contener un atributo llamado for que cuando hacae macth con un id de igual valor estos dos tag se relacionan <br><br>
+                Ahora bien no se debe usar solo para mostrar un texto de la siguiente manera  <br>
+                {{abreDiamante}}h:outputLabel value="#{{abrellave}}bean.message{{cierrallave}}" /{{cierraDiamante}} <br><br>
+                Donde no se usa el atributo for. Para estos casos se debe usar <strong>outputText</strong>
+              </td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td>Diferencia entre action y actionListener</td>
+              <td>
+                los dos pueden contener valores que retornan el metodo declarado en el action <strong>PEROooooooo</strong><br><br>
+                <strong>action = </strong>Es usado para cuando el valor que tiene va a Re-direccionar a otra vista <br>
+                <strong>actionListener =</strong> No Re-direcciona a otra Vista solo ejecuta el metodo
+              </td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+</div>

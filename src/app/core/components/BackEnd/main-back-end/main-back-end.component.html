@@ -1,0 +1,162 @@
+<div>
+    <nav>
+        <ul>
+            <li *ngFor="let menu of lista">
+                <a
+                    routerLink="/{{menu}}"
+                    routerLinkActive="active"
+                >{{menu}}</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+<div class="container">
+    <table class="table table-striped table-hover table-bordered align-middle">
+        <thead>
+            <tr>
+                <th scope="col">Referencia</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cuatro pilares de la POO</td>
+                <td>
+                  1. Extencion o herencia <br>
+                  2. Poliformismo <br>
+                  3. Encapsulamiento <br>
+                  4. Abstraccion <br>
+                </td>
+                <td>
+                  Beneficios <br>
+                  1. Modularidad <br>
+                  2. Informacion oculta <br>
+                  3. Reutilizacion de codigo <br>
+                  4. Mnatenimiento <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Consideraciones</td>
+                <td>
+                    interface ---- extends <br>
+                    class ---- implements(interface, interface, ...) extends(class) <br><br>
+                    Una clase puede implementar cuantas interfaces quiera <strong>PEROOO</strong> solo puede extender 1 <br>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/backend/injectar.png"
+                    alt="injectar"
+                    title="injectar"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Principio <strong><a href="https://platzi.com/clases/1630-mejor-codigo/22211-dependency-inversion-principle/">SOLID</a></strong></td>
+                <td>
+                    <a href="https://www.youtube.com/watch?v=lOg2IuQIp-s">Ver mas info</a> <br><br>
+                    <u>*S: Single Responsibility Principle (SRP)</u><br>
+                    Principio de responsabilidad unica o tambien conocido como principio de alta cohesion  <br><br>
+                    Una clase solo debe tener una razon para existir y una unica responsabilidad <br><br>
+                    <u>*O: Open/Closed Principle (OCP)</u><br>
+                    Principio de abierto y cerrado <br><br>
+                    Una entidad de software debe quedar abierta para su extension y cerrada para su modificacion <br><br>
+                    <u>*L: Liskov Substitution Principle (LSP)</u><br>
+                    Principio de sustitucion de Liskov <br><br>
+                    Cada clase que hereda de otra puede usarse como su padre sin necesidad de conocer las diferencias entre ellas. La idea es que un padre herada a un hijo y ya .... el principio de sustitucion de Liskov aparece cuando en algun punto del codigo uno objeto requiera del padre y en esta caso pueda usar al hijo para funcionar ya que no habria diferncia <br><br>
+                    <u>*I: Interface Segregation Principle (ISP)</u><br>
+                    El principio de segregación de la interfaz <br><br>
+                    establece que los clientes de un programa dado sólo deberían conocer de éste aquellos métodos que realmente usan, y no aquellos que no necesitan usar. <br><br>
+                    <u>*D: Dependency Inversion Principle (DIP)</u><br>
+                    Una abstracción se enfoca en la visión externa de un objeto, separa el comportamiento específico de un objeto, a esta división que realiza se le conoce como la barrera de abstracción, la cuál se consigue aplicando el principio de mínimo compromiso.
+                    . <br><br>
+                    Pero… ¿Qué es el principio de mínimo compromiso? Se refiere al proceso por el cuál la interfaz de un objeto muestra su comportamiento específico y nada más, absolutamente nada más. <br><br>
+                    Ahora bien hay clases de alto nivel y otras de bajo nivel, las clases de alto nivel son las encargadas de llevar a cabo la logica del negocio y las de bajo nivel existen para ayudar a las de alto nivel cumplan con su proposito <br><br>Los modulos o clases de alto nivel no deben depender de los de bajo nivel ambos deben depender de abstracciones  <br><br>
+                </td>
+                <td>
+                    S: Single Responsibility Principle (SRP)<br>
+                    O: Open/Closed Principle (OCP)<br>
+                    L: Liskov Substitution Principle (LSP)<br>
+                    I: Interface Segregation Principle (ISP)<br>
+                    D: Dependency Inversion Principle (DIP)<br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>inyeccion de depencias(DI)</td>
+                <td>
+                    Inyectar una depedencia es pasar la depedencia a la clase que lo necesita en lugar de crearla dentro del mismo componente o clase <br>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Inversion de Control (IoC)</td>
+                <td>
+                    Se trata de que un frameworl toma el control de los objetos y sea el quien cree o instacie los objetos
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

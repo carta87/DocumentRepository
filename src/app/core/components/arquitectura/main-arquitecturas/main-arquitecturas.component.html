@@ -1,0 +1,105 @@
+<div>
+    <nav>
+        <ul>
+            <li *ngFor="let menu of lista">
+                <a
+                    routerLink="/{{menu}}"
+                    routerLinkActive="active"
+                >{{menu}}</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+<div class="container">
+    <table class="table table-striped table-hover table-bordered align-middle">
+        <thead>
+            <tr>
+                <th scope="col">Referencia</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong><a href="http://www.jtech.ua.es/ayto/ayto2008/servd-web/sesion03-apuntes.html">Tomcat</a></strong></td>
+                <td>
+                  <strong>bin</strong> : ejecutables y scripts para arrancar y parar Tomcat. <br>
+                  <strong>common</strong> : clases y librerías compartidas entre Tomcat y las aplicaciones web. Las clases se deben colocar en common/classes, mientras que las librerías en formato JAR se deben poner en common/lib. <br>
+                  <strong>conf</strong> : ficheros de configuración. <br>
+                  <strong>logs</strong> : directorio donde se guardan por defecto los logs.<br>
+                  <strong>server</strong> : las clases que componen Tomcat. <br>
+                  <strong>shared</strong> : clases compartidas por todas las aplicaciones web.<br>
+                  <strong>webapps</strong> : directorio usado por defecto como raíz donde se colocan todas las aplicaciones web.<br>
+                  <strong>work y temp</strong> : directorios para almacenar información temporal<br>
+                </td>
+                <td>
+                  Tomcat está compuesto por una serie de módulos cuyo comportamiento es altamente configurable. Incluso se pueden cambiar las clases que utiliza Tomcat por clases propias modificando el fichero server.xml <br><br>
+                  <img
+                  src="../../../../../assets/arquitectura/ArquitecturaTomcat.png"
+                  alt="ArquitecturaTomcat"
+                  title="ArquitecturaTomcat"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>LOGS</strong></td>
+                <td>
+                  tinen como unica finalidad primordial es la de registrar los eventos del servidor y de las aplicaciones para poder realizar una depuración en caso de que se produzca algún error.
+                </td>
+                <td>
+                  <strong>Estos ficheros se encuentran dentro de la carpeta logs</strong><br><br>
+                  <strong>* catalina</strong> : logger global definido al nivel del engine.<br>
+                  <strong>* localhost</strong> : logger global a todas las aplicaciones del host localhost.<br>
+                  <strong>* manager</strong> : logger que utiliza el manager de Tomcat.<br>
+                  <strong>* admin</strong> : logger que utiliza la aplicación de administración.<br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Ficheros de Configuracion</strong></td>
+                <td>
+                  <strong>server.xml</strong> : el fichero principal de configuración. <br>
+                  <strong>web.xml</strong> : es un fichero en el formato estándar para aplicaciones web con servlets, que contiene la configuración global a todas las aplicaciones.<br>
+                  <strong>tomcat-users.xml</strong>: lista de usuarios y contraseñas para autentificación.<br>
+                  <strong>catalina.policy</strong> : políticas de seguridad para la ejecución del servidor.<br>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,523 @@
+<div class="container">
+    <div>
+        En arquitectura podemos encontrar diversos formas como <a href="https://platzi.com/blog/multi-tenant-que-es-y-por-que-es-importante/">sistemas Multitenant</a> tambien <a href="https://evaluandocloud.com/que-es-multi-tenancy/"> ver info</a> o <a href="https://es.wikipedia.org/wiki/Aplicaci%C3%B3n_monol%C3%ADtica#:~:text=En%20ingenier%C3%ADa%20de%20software%2C%20una,y%20sobre%20una%20misma%20plataforma.&text=%E2%80%8B%20Estas%20aplicaciones%20a%20veces%20son%20asociadas%20con%20unidades%20centrales."> sistemas monoliticos </a> <br><br>
+        <img src="../../../../../assets/backend/go/arquitecturaProject.png" alt=""> <br>
+        Multitenant es una arquitectura de software que permite a una sola instancia de software servir a muchos clientes.  una aplicación monolítica hace referencia a una aplicación software en la que la capa de interfaz de usuario y la capa de acceso a datos están combinadas en un mismo programa y sobre una misma plataforma <br><br>
+
+        <a href="https://airbrake.io/blog/software-design/domain-driven-design">DDD: domain-driven design</a><br><br>
+        Es una filosofia de diseño de arquitectura de software orientada al Dominio <br>
+        No es una tecnología ni una metodología, este provee una estructura de prácticas y terminologías para tomar decisiones de diseño que enfoquen y aceleren el manejo de dominios complejos en los proyectos de software <br><br>
+
+        <a href="https://es.wikipedia.org/wiki/Identificador_%C3%BAnico_global">GUID: Globally Universally Unique Identifier</a> <br><br>
+        El identificador único global, en inglés: es un número pseudoaleatorio empleado en aplicaciones de software. El GUID es una implementación de Microsoft de un estándar llamado universally unique identifier, especificado por la Open Software Foundation. Es esencialmente un número de 16 bytes <br><br>
+
+        <a href="https://www.teatroabadia.com/es/uploads/documentos/iagramas_del_uml.pdf">Diagramas del UML: Lenguaje unificado de modelado </a> <br><br>
+        Es un lenguaje gráfico para visualizar, especificar, construir y documentar un sistema. La finalidad de los diagramas es presentar diversas perspectivas de un sistema, a las cuales se les conoce como modelo. Recordemos que un modelo es una representación simplificada de la realidad; el modelo UML describe lo que supuestamente hará un sistema, pero no dice cómo implementar dicho sistema. leer <a href="https://www.lucidchart.com/pages/es/que-es-el-lenguaje-unificado-de-modelado-uml">Documentacion</a> <br><br>
+
+
+    </div>
+    <table class="table table-striped table-hover table-bordered align-middle">
+        <thead>
+            <tr>
+                <th scope="col">Referencia</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>consideraciones </td>
+                <td>
+                    1. Es un lenguaje compilado y tipado estastico; debe ser antes compilado <br>
+                    2. Creado por Google 2009 (con la potencia de C pero con la sintaxis amigable de python) <br>
+                    3. Soporte nativo para concurencia multitarea <br>
+                    4. <a href="https://golang.org/dl/">Documentacion</a> <br>
+                    5. <a href="https://www.freecodecamp.org/news/setting-up-go-programming-language-on-windows-f02c8c14e2f/">Como configurarlo</a> <br>
+                    6. lenguaje de programacion de codigo abierto <br>
+                    7. El garbash collector es mas eficente de 100 us a 10 us <br>
+                    {{abreDiamante}} {{cierraDiamante}}
+                    No se les llaman “Operadores Diamante”, su nombre Oficial es Genéricos
+                </td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td><strong>Docker y Kubernetes</strong></td>
+                <td>
+                    Para Despliege de Apps: Son plataformas para despliegue de aplicaciones de microservicios, <strong>Docker</strong> crea un container en el cual se puede ejecutar la aplicacion y <strong>kubernete</strong> toma el contenedor para desplegar la aplicacion con un escalamiento de forma horizontal 
+                </td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td>Variables de entorno GO</td>
+                <td>
+                    <strong>GOPATH :</strong> El entorno en donde se van a desarrollar los programas<br>
+                    <strong>GOBIN :</strong> Es donde se van a instalar todos los binarios listos para ser ejecutas en cualquier PATH  <br>  
+                    <strong>GOROOT :</strong> Es donde se va a agregar el ejecutador de root <br> <br>
+                    Despues con estas variables ya inicializados creamos el PATH para que sea posible crear en cualquier parte del equipo 
+                    <strong>export PATH:$PATH:$GOBIN:$GOROOT/bin</strong>
+                    ahora para verificar que este correctamente instalado <a href="https://www.freecodecamp.org/news/setting-up-go-programming-language-on-windows-f02c8c14e2f/">Ver Documentacion </a> debemos verificar que la variable del path quede en las variables de entorno del equipo y despues verificamos que este apuntado a la carpeta donde se instalo con <strong>echo %PATH%</strong> no devuelve como respuesta <strong>Go</strong>
+                </td>
+                <td></td>
+            </tr>
+    
+
+                
+            <tr>
+                <td>Comandos en LINUX</td>
+                <td>
+                    . . bashrc //actualizar el bash<br>
+                    godoc fmt //documentation de la liberia <br>
+                    go fmt xProyecto.go //Dar formato al proyecto <br>
+                    go version //ver la versiond de go instalada <br>
+                    go mod vendor //en caso de inconsistencia en alguna libreria <br>
+                    mkdir go //instalar el entorno para ello se crean los directorios <br>
+                    go build archivoX.go //con este comando compilamos el archivo para crear el ejecutable <br>
+                    go run archivo.go // lo ejecuta sin compilar ya que crea un archivo temporal <br>
+                    dentro de la carpeta go debe haber tres carpertas= <strong>bin pkg src</strong> sino crearlas <br>
+                    <strong>bin: </strong>En esta carpeta se almacena todos los ejecutables que utilicemos o creemos
+                    <strong>pkg: </strong>Guarda cierto codigo de las dependencias librerias que utilicemos <br>
+                    <strong>src: </strong>Aca estara todo el codigo escrito en Go y el codigo de las librerias de terceros 
+                </td>
+                <td></td>
+            </tr>
+                
+    
+            <tr>
+                <td></td>
+                <td>
+                    si las variables son declaradas pero no inicializadas toman un valor por defecto <br>
+                    int = 0 <br>
+                    string = "string vacio" <br>
+                    bool = false <br>
+                    si las variables son declaradas e inicializadas pero no usadas no compila <br>
+                    variable := 8 //esto quiere decir que declara y go internamente ajusta el tipo de la variable <br>
+
+                </td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td>int/uint</td>
+                <td>al indicar el tipo de dato toma un buen performace el codigo <br><br>
+                    <strong>int</strong> = pueden tomar valores negativos <br>
+                    <strong>uint</strong> = si sabemos que siempre van a ser positivos 
+                </td>
+                <td>
+                    <img src="../../../../../assets/backend/go/enteros.png" alt="">
+                    <img src="../../../../../assets/backend/go/entPos.png" alt="">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>Float</td>
+                <td></td>
+                <td>
+                    <img src="../../../../../assets/backend/go/NumeDeci.png" alt="">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>Numeros Imaginarios</td>
+                <td></td>
+                <td>
+                    <img src="../../../../../assets/backend/go/NumImg.png" alt="">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>boolean</td>
+                <td>
+                    textos y booleanos
+                    string = ""
+                    bool = true or false
+                </td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td><a href="https://pkg.go.dev/fmt#pkg-variables">Inserccion de datos</a>  </td>
+                <td>
+                    "%s" = indica que el valor que va hay es un string <br>
+                    "%d" = indica que el valor que va hay es un entero <br>
+                    "%v" = indica que el valor que va hay puede ser cualquiera <br>
+                    "%T" = Conocer el tipo de Xvariable <br>
+                </td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td></td>
+                <td>
+                    Println = imprime con salto de linea <br>
+                    Print = imprime <br>
+                    printf = imprime insertando varaibles dentro del string <br>
+                    Sprintf = almacena un string en una variable <br>
+                    Fprintf("....") // devolver un texto <br>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><a href="https://platzi.com/clases/2232-programacion-golang/35751-structs-la-forma-de-hacer-clases-en-go/"><strong>Struct</strong></a></td>
+                <td>
+                    Struct tipos de datos personalizados, se crea un objeto que sera un modelo para otro dato <br><br>
+                    En Go no existen las <strong>clases</strong> en su lugar existen los <strong>struct</strong> 
+                </td>
+                <td>
+                    <img src="../../../../../assets/backend/go/struct.png" alt="">
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="https://pkg.go.dev/std">Librerias</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td>trabajo con arrays</td>
+                <td>
+                    MyArray = append(MyArray,"Nuevo elem")  // agrega un elemento al final<br><br>
+                    fmt.Println(len(MyArray)) // <strong>len</strong>(Muestra el tamaño de MyArray) <br><br>
+                    fmt.Println(cap(MyArray)) // <strong>cap</strong>(Muestra la capacidad de MyArray) <br><br>
+                </td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td>ruteador </td>
+                <td>
+                    Node js = Express <br>
+                    sinfoni = phpFundation <br>
+                    Go = gorilla/mux install = go get -u github.com/gorilla/mux <br> 
+                </td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td><a href="https://labix.org/mgo">Conectar Go con mongoBD</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td>if</td>
+                <td></td>
+                <td>
+                    <img src="../../../../../assets/backend/go/if.png" alt="">
+                </td>
+            </tr>
+                
+            <tr>
+                <td>for</td>
+                <td></td>
+                <td>
+                    <img src="../../../../../assets/backend/go/for.png" alt="">
+                </td>
+            </tr>
+                
+            <tr>
+                <td>forEach</td>
+                <td></td>
+                <td>
+                    <img src="../../../../../assets/backend/go/foreach.png" alt="">
+                </td>
+            </tr>
+                        
+            <tr>
+                <td>For While</td>
+                <td></td>
+                <td>
+                    <img src="../../../../../assets/backend/go/for while.png" alt="">
+                </td>
+            </tr>
+                
+            <tr>
+                <td>For forever</td>
+                <td>se debe garantizar que en algun punto del programa se detenga o salga de este ciclo para no consumir maquina de manera ineficiente</td>
+                <td>
+                    <img src="../../../../../assets/backend/go/forforever.png" alt="">
+                </td>
+            </tr>
+                
+            <tr>
+                <td>switch</td>
+                <td></td>
+                <td>
+                    <img src="../../../../../assets/backend/go/switch.png" alt="">
+                </td>
+            </tr>
+                
+            <tr>
+                <td><strong>Keywords</strong></td>
+                <td>
+                    <strong>defer</strong>: va a determinar la ultima ejecutacion antes de terminar una funcion y puede ser empleado para cerrar conexiones o archivos  <br>
+                    las siguientes se usan en un ciclo for <br><br>
+                    <strong>break</strong>: saca al ultimo ambiente rompe el ciclo for<br>
+                    <strong>continue</strong>: Se emplea en casos tener tener un error controlado haciendo que se continue con la ejeccucion del programa no rompe el flujo de ejecucion <br>
+                </td>
+                <td>
+                    <img src="../../../../../assets/backend/go/defer.png" alt="">
+                </td>
+            </tr>
+                
+            <tr>
+                <td>Array vs Slices</td>
+                <td>
+                    <strong>Array</strong>: tiene un tamaño definido <br>
+                    <strong>Slices</strong>: No tiene tamaño definido<br>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><a href="https://codingornot.com/13-go-to-go-maps-en-golang">Maps</a>  y Diccionarios </td>
+                <td>
+                    Un map nos permite almacenar información de forma similar a como lo hacíamos con los arreglos o los slices pero con la particularidad de que cada elemento de un map tiene asociada una llave única. <br><br>
+                    Es una estructura de datos muy conveniente cuando tienes dos o mas listas que se relacionan entre si ya que con el caso de los maps tenemos acceso mediante una llave y valor  ademas ten en cuenta que los maps son mas eficientes que manejar slices o arrays ya que de forma nativa ellos implementan concurrencia para poder interacturar enter las operaciones que se vayan a ejecutar con ellos 
+                </td>
+                <td>
+                    En caso de Pyton son llamados Diccionarios y caso de Go son Maps
+                </td>
+            </tr>
+                
+            <tr>
+                <td>Diccionarios</td>
+                <td>
+                    Un diccionario agrupa elementos identificandolos por medio de claves unicas, Es una colleccion de pares formados por su contenido y clave de acceso, tambien denominados mapas <br><br>
+                    La clase abstracta Dictionary es la interfaz para crear diccionarios en las colecciones historicas (vector, stack, Dictionary, HashTable, Enumeration) y procesa la coleccion como si fuera un array asociativo ak que se accede por una clave <br><br>
+                    la clave y el valor de cada elemento son de tipo objeto 
+                </td>
+                <td>
+                    <img src="../../../../../assets/backend/go/Dictionary.png" alt="">
+                </td>
+            </tr>
+                
+            <tr>
+                <td>HashTable</td>
+                <td>
+                    Extiende Dictionary, permitiendo que se pueda utilizar para agrupar datos asociativos, este se comporta como una tabla hash, Dispersa los elementos segun el codigo que devuelve el metodo hashCode() del obejto clave <br><br> La clase de los objetos "clave" debe disponer del metodo <strong>int hashCode()</strong> utilizado para dispersar el elemento, tambien deben deisponer del metodo <strong>equals()</strong> para poder realizar busquedas y comparaciones <br><br>
+                    Sirve para comparar objetos de una forma mas rapida en estructuras Hash ya que solo devuelve un numero entero(key)
+                </td>
+                <td>
+                    <img src="../../../../../assets/backend/go/hashTable.png" alt="">
+                    <img src="../../../../../assets/backend/go/hashTable2.png" alt="">
+                </td>
+            </tr>
+                
+            <tr>
+                <td>Colecciones</td>
+                <td><a href="https://es.slideshare.net/angenio2/programacin-3-mapas-y-diccionarios-colecciones-parametrizadas">Revisar mas funciones especiales </a> <br><br>
+                    Map <br>
+                    HashMap <br>
+                    treeMap <br>
+                    Declaracion de tipo parametrizado <br>
+                </td>
+                <td>
+                    <img src="../../../../../assets/backend/go/Coleccion.png" alt="">
+                </td>
+            </tr>
+                
+            <tr>
+                <td><a href="https://platzi.com/clases/2232-programacion-golang/35752-modificadores-de-acceso-en-funciones-y-structs/"></a>Modificadores de acceso</td>
+                <td>
+                    si la varaible, function tiene la primera letra : <br>
+                    <strong>mayuscula</strong> =  publico <br>
+                    <strong>minuscula</strong> = privado <br> <br>
+                    Debe tener un comentario, y se debe importar el paquete y opcionalmente se le puede colocar un alias si la varaible empieza por minuscula es privada es por esta razon que da error en la segunda imagen 
+                </td>
+                <td>
+                    <img src="../../../../../assets/backend/go/acceso.png" alt=""><br><br>
+                    <img src="../../../../../assets/backend/go/acceso1.png" alt=""><br><br>
+                    <img src="../../../../../assets/backend/go/acceso2.png" alt=""><br><br>
+                    <img src="../../../../../assets/backend/go/acceso3.png" alt="">
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="https://platzi.com/clases/2232-programacion-golang/35753-structs-y-punteros/">Punteros</a></td>
+                <td>
+                    los punteros Son acceso a la memoria <br><br>
+                    Cuando se crea una variable lo que hace el runtime es crear una direccion de memoria y en ese espacio guarda Xcosas <br><br>
+                    se usa <strong>&</strong> para hacer Referencia a la direccion de memoria linea 9 el valor de b va a ser la ubicacion de memoria de a <br><br>
+                    se usa <strong>*</strong> para hacer Referencia al valor que hay guardado en Xdireccion linea 14 *b= 4
+                </td>
+                <td>
+                    <img src="../../../../../assets/backend/go/punteros.png" alt="">
+                </td>
+            </tr>
+                
+            <tr>
+                <td><a href="https://www.youtube.com/watch?v=WaOIianpwAA">Modulos</a></td>
+                <td>
+                    Al trabajar por fuera del <strong>GOPATH</strong> debemos indicar el espacio donde estaran las librerias de terceros que requeriran los proyectosque se estan implementando <br><br>go init mod github.com/jugutafur/nombrePaquete <br><br><strong>El versionado semantico</strong> hace referncia a la correcta identificacion de los versiones de las librerias donde: <br><br> 1°. Version mayor <br> 2°. Version menor <br> 3°. Parches y <br> 4°. Realise o precantidados (si se requieren hacer pruebas con otros desarrolladores o otras pruebas beta de la palicacion "version beta, alfa...etc") <br><br>
+                    Ahora despues de crear el archivo <strong>go.mod</strong> crea un archivo <strong>go.sum </strong>En este archivo.sum estara identificado de manera inequivoca las versiones de las librerias que son empleadas en el proyecto pro medio de <strong>fecha y hash</strong>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/backend/go/modulos.png"
+                    alt="modulos"
+                    /> <br><br>
+                    <img
+                    src="../../../../../assets/backend/go/VersionadoSemantico.png"
+                    alt="VersionadoSemantico"
+                />
+                </td>
+            </tr>
+                
+            <tr>
+                <td>Para ver en que modulo me encuentro en el workspace</td>
+                <td>
+                    go list <br>
+                    go list all //me muestra todos los modulos que estan en $GOPATH<br>
+                    go list -m all //muestra puntualmente los modulos que estan siendo usandas en la ruta donde se ejecuta este comando <br>
+                    go list -m -versions Xpaquete //muestra todas las versiones disponibles  <br>
+                    go list verify //Verifica que la version del modulo no ha sido modificada 
+                </td>
+                <td></td>
+            </tr>
+                            
+            <tr>
+                <td>Public and private</td>
+                <td>
+                    1. se puede definir un <strong>alias</strong> <br><br>
+                    2. esta ubicacion arranca desde el GOPATH recordar que: GOPATH= C/Go perooooooo arranca desde src principal <strong>NOTA </strong>esto es en el caso de trabajar desde las carpetas de donde esta instalado Go en C pero si trabajar en cualquier otra ubicacion debes trabajar con modulos es decir con <a href="https://www.youtube.com/watch?v=WaOIianpwAA">go.mod</a> ver mas <a href="https://www.youtube.com/watch?v=m3BKBviRE-0&list=PLt1J5u9LpM5-L-Ps8jjr91pKhFxAnxKJp&index=3">inf</a> <br><br>
+                    3. para llamar al struct se puede por el alias o por el nombre del pakage donde se define o nombre del mismo Xarchivo.go que por lo general se llaman igual <br><br>
+                    4. La salida da valores por defecto cuando no se definen 
+                </td>
+                <td>
+                    <img               
+                    src="../../../../../assets/backend/go/Public y private.png"
+                    alt="Public and private"
+                    title="Public and private">
+                </td>
+            </tr>
+                
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+                
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>

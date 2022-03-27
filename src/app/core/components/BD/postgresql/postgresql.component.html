@@ -1,0 +1,339 @@
+<div class="container">
+    <table class="table table-striped table-hover table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Referencia</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://www.postgresqltutorial.com/postgresql-create-table/">Ver inf PostgreSql</a></td>
+                <td>
+                    por si se te olvida el password <a href="https://dba.stackexchange.com/questions/44586/forgotten-postgresql-windows-password">Ver inf</a><br><br>
+                    tenemos dos lenguajes de consultas: <br><br>
+                    1. SQL : el normalmente empleado. <br><br>
+                    2. <strong><a href="https://www.postgresqltutorial.com/introduction-to-postgresql-stored-procedures/">PostgreSQL PL / pgSQL:</a></strong> es un lenguaje de programación procedimental para el sistema de base de datos PostgreSQL. le permite ampliar la funcionalidad del servidor de base de datos PostgreSQL mediante la creación de objetos de servidor con lógica compleja.
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><a href="https://www.postgresqltutorial.com/postgresql-boolean/">Tipos de datos</a>derecha inferior</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Generalidades</td>
+                <td>
+                    PostgreSql tiene una feature que consiste en particionar la tabla para que la consulta sea mucho mas eficiente ver info <a href="https://platzi.com/clases/1480-postgresql/24171-particiones/">paricion</a><br><br>
+                    En la imagen 1. podemos ver la defincion de la tabla bitacora_viaje donde se almacenaran todos los registros de los viajes partiendo que sea una tabla una gran cantidad de registros vamos a indicar que vamos a almacenar de manera particionda es decir: el campo fecha determinara en que particion se va a guardar el registro una vez definida la tabla podemos guardar <strong>PEROOOOO</strong> primero se deben de crear las particiones que no son mas que otras tablas iguales a la primera donde se almacenara los registros pero deben de cumplir con una condicion para en este caso deben estar dentro del rango de una fecha como es posible ver en la consulta sql en la imagen 2. <br><br>
+                    finalmente procedemos a guardar registros en este caso como solo hay una particion el registro que se va a guardar debe cumplir con la condicion, si por ejemplo hay varias particiones por meses cuando se va a guardar el motor identificara a que particion debe guradar el registro.
+                </td>
+                <td>
+                    1.
+                    <img
+                    src="../../../../../assets/bd/PostgreSql/particionTable.png"
+                    alt="particionTable"
+                    title="particionTable"><br><br>
+                    2.
+                    <img
+                    src="../../../../../assets/bd/PostgreSql/particionTable2.png"
+                    alt="particionTable2"
+                    title="particionTable2">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Comandos</td>
+                <td>
+                    <u>Comandos de navegación y consulta de información <br><br></u>
+                    <strong>SHOW config_file</strong>: ver archivos super importantes <br>
+                    Listar todas las bases de datos:<strong> \l</strong> <br>
+                    Ver las tablas de una base de datos: <strong>\dt </strong><br>
+                    Cambiar a otra base de datos: <strong>\c nombre_DB </strong><br>
+                    describir una tabla:<strong> \d nombre_tabla</strong><br>
+                    <strong>\dn</strong> Listar los esquemas de la base de datos actual <br>
+                    <strong>\df</strong> Listar las funciones disponibles de la base de datos actual <br>
+                    <strong>\dv</strong> Listar las vistas de la base de datos actual <br>
+                    <strong>\du</strong> Listar los usuarios y sus roles de la base de datos actual <br>
+                    Ver comandos SQL:<strong> \h o \?</strong><br>
+                    Ver como se ejecuta un comando SQL: <strong>\h nombre_de_la_función</strong><br>
+                    <strong>Control + c</strong>: Cancela todo lo que hay en pantalla.<br>
+                    Consultar versión de postgres instalada: <strong> SELECT version();</strong><br>
+                    Inicializar el contador de tiempo para que la consola diga cuanto se demoro en ejecutar ese comando : <strong> \timing</strong><br>
+                    <strong>Control + L: </strong> Limpiar pantalla. <br>
+                    ENTRAR A LA CONSOLA DE POSTGRES: <strong>psql -U postgres -W</strong> <br><br><br>
+                </td>
+                <td>
+                    <u>Comandos de inspección y ejecución <br><br></u>
+                    Volver a ejecutar la función que acabaste de ejecutar en la consola: <strong>\g</strong><br>
+                    <strong>\s</strong> Ver el historial de comandos ejecutados
+                    <strong>\s {{abreDiamante}}nombre_archivo{{cierraDiamante}}</strong> Si se quiere guardar la lista de comandos ejecutados en un archivo de texto plano <br>
+                    <strong>\i  {{abreDiamante}}nombre_archivo{{cierraDiamante}}</strong> Ejecutar los comandos desde un archivo <br>
+                    <strong>\e</strong> Permite abrir un editor de texto plano, escribir comandos y ejecutar en lote. \e abre el editor de texto, escribir allí todos los comandos, luego guardar los cambios y cerrar, al cerrar se ejecutarán todos los comandos guardados. <br>
+                    <strong>\ef</strong> Equivalente al comando anterior pero permite editar también funciones en PostgreSQL <br><br><br>
+                    Comandos para debug y optimización <br><br>
+                    <strong>\timing</strong> Activar / Desactivar el contador de tiempo por consulta <br><br><br>
+                    <u>Comandos para cerrar la consola <br><br></u>
+                    <strong>\q</strong> Cerrar la consola <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="https://platzi.com/clases/1480-postgresql/24172-creacion-de-roles/">Roles</a></td>
+                <td>
+                    PostgreSql nos permite crear roles que tendran permisos sobre las tablas asi como crear grupos de Roles esto se hace para tener varios usuarios que tengan ciertas permisos sobre la edicion, creacion y Eliminacion de las tablas <br><br><br>
+                    \n CREATE ROL //ver que privilegios y atributos se le pueden asignar a un rol <br>
+                    \dg //para ver todos los usuarios y sus privilegios y atributos <br>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/bd/PostgreSql/Role.png"
+                    alt="Role"
+                    title="Role">
+                </td>
+            </tr>
+
+
+            <tr>
+                <td><a href="https://www.todopostgresql.com/postgresql-data-types-los-tipos-de-datos-mas-utilizados/">tipos de datos</a> ademas encontraras mas inf <a href="https://www.postgresql.org/docs/11/datatype.html">En este link</a></td>
+                <td>
+                    En una BD encontramos estos tipos de datos <br><br>
+                    <img
+                    src="../../../../../assets/bd/PostgreSql/tiposDatos.png"
+                    alt="tiposDatos"
+                    title="tiposDatos">
+                </td>
+                <td>
+                    Y en PostgreSQL encontramos estos tipos de datos especiales donde : <br><br>
+                    1. <strong>Geometrico:</strong> Calcular areas con X y Y <br>
+                    1. <strong>Direccion de Red:</strong> Almacenar ips y nos permite hacer calculos de mascara de sub red<br>
+                    1. <strong>Texto tipo bit:</strong >No spérmite hacer calculos en otros sistemas como hexdecimal u octal  <br>
+                    1. <strong>XML, JSON:</strong> Para guardar formatos <br>
+                    1. <strong>Arreglos:</strong> Consiste en vectores y matrices <br><br><br>
+
+                    <img
+                    src="../../../../../assets/bd/PostgreSql/tiposDatos2.png"
+                    alt="tiposDatos2"
+                    title="tiposDatos2">
+                </td>
+              </tr>
+
+            <tr>
+                <td>BD</td>
+                <td>
+                    Crear <br>
+                    Cambiar Nombre <br>
+                    Eliminar <br>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/bd/SqlServer/BDSqlServer.png"
+                    alt="ngIf"
+                    title="ngIf">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Tabla</td>
+                <td>
+                    Crear <br>
+                    Mostrar <br>
+                    Cambiar nombre <br>
+                    Eliminar <br>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/bd/PostgreSql/pCreatetable.png"
+                    alt="pCreatetable"
+                    title="pCreatetable"> <br><br>
+                    <img
+                    src="../../../../../assets/bd/PostgreSql/pCreateTable2.png"
+                    alt="pCreatetable2"
+                    title="pCreatetable2">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Registro</td>
+                <td>
+                    Crear <br>
+                    Mostrar <br>
+                    Editar <br>
+                    Eliminar <br>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/bd/PostgreSql/pRegister.png"
+                    alt="pRegister"
+                    title="pRegister">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Columna</td>
+                <td>
+                    Crear <br>
+                    Mostrar <br>
+                    Cambiar nombre <br>
+                    Eliminar <br>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/bd/SqlServer/ColumnSqlServe.png"
+                    alt="ColumnSqlServe"
+                    title="ColumnSqlServe">
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>Clave Compuesta</td>
+                <td>declarar una clave primary compuesta pueden haber id repetidos...pero no con el mismo nombre</td>
+                <td>
+                    <img
+                    src="../../../../../assets/bd/SqlServer/PrimaryCompuestaSqlServer.png"
+                    alt="PrimaryCompuestaSqlServer"
+                    title="PrimaryCompuestaSqlServer">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Foreign Key</td>
+                <td>Se puede realizar de las siguientes 4 maneras</td>
+                <td>
+                    <img
+                    src="../../../../../assets/bd/SqlServer/FKSqlServer.png"
+                    alt="FKSqlServer"
+                    title="FKSqlServer">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Inicio</td>
+                <td>
+                    Para arrancar al dia con una BD por lo general se reinicia las tablas donde prueba es la BD y persona es la tabla
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/bd/SqlServer/InicioSqlServer.png"
+                    alt="InicioSqlServer"
+                    title="InicioSqlServer">
+                </td>
+            </tr>
+
+            <tr>
+                <td>fecha</td>
+                <td>
+                    Para guardar la fecha en la cual se crea el registro se puede hacer de la siguiente manera
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/bd/SqlServer/time.png"
+                    alt="time"
+                    title="time">
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>tabla salida</strong></td>
+                <td>
+                    Es un <strong>Procedimiento almacenado</strong> que muestra una tabla que esta compuesta por otras por medio de idEmpresa. <br><br><br>
+                    En este codigo podemos ver <br><br>1. Se declara una tabla que va a funcionar de salida. <br><br>2. Son <strong>casteados</strong> los datos que estan en formato fecha a string. <br><br>3. Son llamadas las tablas por medio de inner joins para unir las tablas que se requieren para llenar la tabla declarada.
+
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/bd/SqlServer/tablaRef.png"
+                    alt="time"
+                    title="time">
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>fecha</strong></td>
+                <td>
+                    *Obtner fecha del sistema GETDATE() <br><br>
+                    *Obtener una parte de la fecha DATEPART(year, day, month..,GETDATE()) <br> <br>
+                    *Obtener el nombre del mes "NO FUNCIONA PARA DAY NI YEAR" GETNAME(MONTH, GETDATE()) <br><br>
+                    *Obtiene la diferencia en tiempo para conocer cuanto falta para alguna fecha DATEDIFF(indicar en que medidas la quiero day, month o year, '1° fecha', '2° fecha') <br><br><br><br>
+                    <strong>la siguiente imagen corresponde a una consulta en ORACLE</strong> Oracle no soporta consultas de tipo select sin la clausula from nos ofrece una tabla dummy  <br><br>
+                    <img
+                    src="../../../../../assets/bd/SqlServer/Oracle.png"
+                    alt="time"
+                    title="time">
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/bd/SqlServer/fecha.png"
+                    alt="time"
+                    title="time">
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Order by</strong></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td colspan="3">
+                    Realtions Foreing Key <br><br><br>
+                    <img
+                    src="../../../../../assets/bd/PostgreSql/Relations.png"
+                    alt="Relations"
+                    title="Relations">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,259 @@
+<div>
+    <nav>
+        <ul>
+            <li *ngFor="let menu of lista">
+                <a routerLink="/{{menu}}"
+                    routerLinkActive="active">{{menu}}</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="container">
+  <table class="table table-striped table-hover table-bordered align-middle">
+      <thead>
+          <tr>
+              <th scope="col">Referencia</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">Ejemplo</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Ordenamiento de Arrays</td>
+              <td>Ordenar un array sirve para cuando se tienen muchos datos y se ordenan especialmente los numericos</td>
+              <td>Algoritmos de ordanamiento <br><br>
+                * Ordenamiento por seleccion  <br>
+                * Ordenamiento por Inserción <br>
+                * Ordenamiento por Metodo de la burbuja <br>
+              </td>
+          </tr>
+
+          <tr>
+            <td><a href="https://www.youtube.com/watch?v=QtJaofmJAhQ&list=PL7tWmaH04EfIG-ZGq4D6GlO1Pl-iNbVay&index=21">Ordenamiento por seleccion </a></td>
+            <td>
+              1. primero se separan dos grupos los ordenados y los no ordenados, como estan en desorden el primer elemento se dice que esta ordenado y los demas no. <br><br>
+              2. en el grupo de los desordenados se busca el elemento de menor valor si se intercambia con el primer elemento del array <br><br>
+              3. despues nuevamente entre el grupo de los desordenados se encuentra el elemento de menor valor si va agragando al grupo de los ordenados y <strong>asi susesivamente </strong>
+            </td>
+            <td>
+              <img
+              src="../../../../../assets/FrontEnd/VB/OrdenamientoSeleccion.png"
+              alt="OrdenamientoSeleccion"
+              title="OrdenamientoSeleccion">
+            </td>
+          </tr>
+
+          <tr>
+            <td><a href="https://www.youtube.com/watch?v=bwFqnKCZA5I&list=PL7tWmaH04EfIG-ZGq4D6GlO1Pl-iNbVay&index=22">Ordenamiento por Inserción</a></td>
+            <td>
+              1. primero se separan dos grupos los ordenados y los no ordenados, como estan en desorden el primer elemento se dice que esta ordenado y los demas no. <br><br>
+              2. en el grupo de los desordenados se selecciona el elemento despues de la posicion 0, es decir el elemento de la posicion 1 y se va a intercambiar con el primer elemento del array si su valor es menor <br><br>
+              3. despues nuevamente entre el grupo de los desordenados se continua consecutivamente con las demas posiciones del grupo desordeando y se va comparando si es menor que vaya intercambiando posiciones <strong>asi susesivamente </strong>
+            </td>
+            <td>
+              <img
+              src="../../../../../assets/FrontEnd/VB/OrdenamientoInserccion.png"
+              alt="OrdenamientoInserccion"
+              title="OrdenamientoInserccion">
+            </td>
+          </tr>
+
+          <tr>
+            <td><a href="https://www.youtube.com/watch?v=BBNQqrtGNzQ&list=PL7tWmaH04EfIG-ZGq4D6GlO1Pl-iNbVay&index=23">Ordenamiento por Metodo de la burbuja</a></td>
+            <td>
+              ordenar primero los de mayor peso <br><br>
+
+              1. primero se separan dos grupos los ordenados y los no ordenados, como estan en desorden el primer elemento se dice que esta ordenado y los demas no. <br><br>
+              2. en el grupo de los desordenados se selecciona el elemento despues de la posicion 0, es decir el elemento de la posicion 1 y se va a intercambiar con el primer elemento del array si su valor es mayor <br><br>
+              3. despues nuevamente entre el grupo de los desordenados se continua consecutivamente con las demas posiciones del grupo desordeando y se va comparando si es mayor  que vaya intercambiando posiciones hasta llegar al final<strong>asi susesivamente </strong><br><br>
+              Como es posible identificar primero se ordenan los de mayor peso <strong>peroooo</strong> para realizar esta tecnica se requiere dos bucles for anidados <br><br>
+            </td>
+            <td>
+              bucle for interno
+              <img
+              src="../../../../../assets/FrontEnd/VB/OrdenamientoBurbuja.png"
+              alt="OrdenamientoBurbuja"
+              title="OrdenamientoBurbuja"><br><br>
+              bucle for externo
+              <img
+              src="../../../../../assets/FrontEnd/VB/OrdenamientoBurbuja2.png"
+              alt="OrdenamientoBurbuja2"
+              title="OrdenamientoBurbuja2">
+            </td>
+          </tr>
+
+          <tr>
+            <td>Copiar un array a otro o una matriz</td>
+            <td>
+              Consideraciones <br><br>
+              1. Deben tener los mismos tamaños <br>
+              2. Deben de ser de los mismos tipos de datos <br>
+              3. El array o matriz destino debe ser vacio <br>
+            </td>
+            <td>
+              Copia Array VB
+              <img
+              src="../../../../../assets/FrontEnd/VB/CopiaArrayVB.png"
+              alt="CopiaArrayVB"
+              title="CopiaArrayVB"> <br><br>
+              Copia Array Java
+              <img
+              src="../../../../../assets/FrontEnd/VB/CopiaArrayJava.png"
+              alt="CopiaArrayJava"
+              title="CopiaArrayJava"> <br><br>
+              Copia Matriz VB
+              <img
+              src="../../../../../assets/FrontEnd/VB/CopiaMatrizVB.png"
+              alt="CopiaMatrizVB"
+              title="CopiaMatrizVB">
+            </td>
+          </tr>
+
+          <tr>
+            <td>Busqueda</td>
+            <td>
+              Busqueda de datos parcial <strong>Busca un elemento en concreto dentro del array Ejemplo: 45 </strong> : Cuando el datos que se esta buscando haga match con un dato dentro del array la busqueda finaliza <br><br>
+              Busqueda total <strong>Recorre todo el Array Ejemplo: Cuantas personas son menores a 50 </strong> : para en este caso debe recorrer todo el array
+            </td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Redim y Perserve</td>
+            <td>
+              <img
+              src="../../../../../assets/FrontEnd/VB/RedimPreserve.png"
+              alt="RedimPreserve"
+              title="RedimPreserve"><br><br><br>
+              Si no se realiza Redim Preserve ArrayX(Y) borra los datos anteriores
+              <img
+              src="../../../../../assets/FrontEnd/VB/redimPreserve3.png"
+              alt="redimPreserve3"
+              title="redimPreserve3">
+            </td>
+            <td>
+              <img
+              src="../../../../../assets/FrontEnd/VB/redimPreserve2.png"
+              alt="redimPreserve2"
+              title="redimPreserve2">
+            </td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+      </tbody>
+  </table>
+</div>

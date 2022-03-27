@@ -1,0 +1,449 @@
+<div class="container">
+    <table class="table table-striped table-hover table-bordered align-middle">
+        <thead>
+            <tr>
+                <th scope="col">Referencia</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <tr>
+                <td><strong>Hay varios tipos de Java</strong></td>
+                <td>
+                    Actualmente hay dos tipos de Java: <br><br>
+                    1. Java de Oracle es la version de pago <br><br>
+                    2. OpenJDK que es la version openJava que ofrece Oracle free de empresas independientes <br><br>
+                    3. <a href="https://docs.aws.amazon.com/es_es/corretto/latest/corretto-11-ug/what-is-corretto-11.html"> Correto </a>: que es la version que ofrece Amazon free, dispone de una certificacion de Java SE y con soporte a larga plazo <br><br>
+                    4. <a href="https://www.redhat.com/es/topics/cloud-native-apps/what-is-a-Java-runtime-environment">RedHat</a> que tambien tiene openJDK <br><br>
+                    Esto es debido a que oracle al ser de pago compañias independientes como <strong>Red hat con OpenJDK, Amazon Correto... entre otros </strong>ofrecen un Java que tecnicamente es igual al de oracle <br>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Arquitectura</td>
+                <td>
+                    Es posible encontrar una aplicacion donde contenga todos los servicios necesarios para que funcione lo cual se llama <strong>servidor de aplicaciones</strong> y una aplicacion que este compuesta por varios servicios o microservicios a esto se le llama <strong>aplicacion autocontenida</strong>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/backend/JavaSpring/aplicacionAutocontenida.png"
+                    alt="aplicacionAutocontenida"
+                    title="aplicacionAutocontenida">
+                </td>
+            </tr>
+            <tr>
+                <td>Contenedor de aplicaciones</td>
+                <td>
+                    Java spring emplea como contenedor de aplicaciones o contenedor de servlet por defecto <strong>Tomcat Y Jetty O Undertow</strong><br><br>
+                    <strong>Docker y Kubernetes</strong><br>
+                    Para Despliege de Apps: Son plataformas para despliegue de aplicaciones de microservicios, <strong>Docker</strong> crea un container en el cual se puede ejecutar la aplicacion y <strong>kubernete</strong> toma el contenedor para desplegar la aplicacion con un escalamiento de forma horizontal <strong>informacion todama de go.ts</strong>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <a href="https://start.spring.io/">Spring Initializr</a><br><br>
+                    Ahora para descargar Repositorios <strong><br><br><a href="https://mvnrepository.com/">Maven Repository</a></strong>
+                </td>
+                <td>
+                    Es el framework de Java para crear aplicaciones autocontenidas <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.spring-application">PARA VER LA DOCUMENTACIO</a> y <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html">tambien en este espacio</a><br><br>
+                    Herramienta de construcción con Maven = gestionan las dependencias con archivos XML <br>
+                    Herramienta de construcción con Grandle = gestionan las dependencias con archivos Grovy <br>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Anotaciones</td>
+                <td>
+                    <a href="https://www.baeldung.com/spring-postconstruct-predestroy">Ver inf @PostConstruct y @PreDestroy</a> <br><br>
+                    <strong>@PostConstruct</strong> //Spring llama a los métodos anotados con @PostConstruct solo una vez, justo después de la inicialización de las propiedades del bean . Tenga en cuenta que estos métodos se ejecutarán incluso si no hay nada que inicializar. <br>
+                    El método anotado con <strong>@PostConstruct</strong> puede tener cualquier nivel de acceso pero no puede ser estático. Debe ser declarado despues de la injeccion de dependencias, solo es posible en <strong>Beans</strong> que soporten la injeccion de dependencias <br>
+                    <br>
+                    <strong>@PreDestroy</strong> //Un método anotado con @PreDestroy se ejecuta solo una vez, justo antes de que Spring elimine nuestro bean del contexto de la aplicación.
+                    <br>
+                    Al igual que con <strong>@PostConstruct</strong> , los métodos anotados con @PreDestroy pueden tener cualquier nivel de acceso, pero no pueden ser estáticos.
+                    <br>El propósito de este método debe ser liberar recursos o realizar cualquier otra tarea de limpieza antes de que se destruya el bean, por ejemplo, cerrar una conexión a la base de datos. <br><br>
+                    <strong>@SpringBootApplication</strong> //declara la class main por donde inicia el project <br>
+                    <strong>@RestController</strong>  //que la clase es un controller <br>
+                    <strong>@RequestMapping("/saludar")</strong>  //define el path principal del controller <br>
+                    <strong>@GetMapping("/hola")</strong> // define el path secundario del controlador <br><br>
+
+                    JPA : Jpa es una especificación de Java, standar, para un framework ORM. <strong>Object Relation Mapping</strong> Quiere decir que son ua aserie de reglas que Java define para que cualquier framework que quiera interactura con la BD de Java, tenga que seguir.
+                    <br><br>
+                    <strong>@Entity</strong> para indicar que una clase java representa una tabla en la base de datos<br>
+                    <strong>@Table</strong> recible el nombre de la tabla<br>
+                    <strong>@Column</strong> se le pone a los atributos de la clase y se usa cuando los nombres entre la tabla y la entidad no coinciden <strong>@Column(unique = true, nullable= false) //para los campos Id o campos que son unicos y no permite valores nulos</strong> <br>
+                    <strong>@Id y @EmbededId</strong> representan la clave primaria, id para sencilla y embeded para compuesta<br>
+                    <strong>@GeneratedValue</strong> genera valores automaticos para las llaves de las tablas<br>
+                    <strong>@OneToMany @ManyToOne</strong> permite representar relaciones<br><br>
+                    <u><a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.stored-procedures">Procedimiento Almacenado</a></u><br><br>
+                    <strong>@Query</strong>(nativeQuery = true) o con la anotación <strong>@Procedure</strong>.<br>
+                    <strong>@Query (value = " SELECT * FROM categorias WHERE id_categoria = ? ", nativeQuery = true ).</strong> Desde la interfaz del crud podemos implementar querys de manera nativa de esta manera<br>
+                    <strong>@Repository</strong> Con este le indicamos a JavaSpring que la clase va a interacturar con la BD por que en esta clase estaran definidos los metodos que operaran con los registros de la BD.<br><br>
+                    MapStruct <br><br>
+                    @Mapper(componentModel = "spring") indicara que la interface va a mapear la table del dominio y la identidad <br>
+                    @Mappings grupo de traductor de campos entre tablas <br><br>
+                    @Mapping van cruzados y es de donde va a sacar el valor y donde se lo va a poner <br>
+                    @InheritInverseConfiguration es para hacer de manera inversa la traduccion ya con esto ya no es necesario declaran nuevamente mappings<br>
+                    @Autowired <strong>Inversion de control</strong> esto es que el framework es el encargado de crear o instanciar objetos <br>
+                    @Service es el puente enter el controller y el repository <br>
+
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>aplicacion.properties</td>
+                <td>
+                    En este archivo podemos configurar diversos entornos para el desarrollo como un entrono de <strong>desarrollo, produccion, stage(prepoduccion....)</strong> <br><br>
+                    * spring.profiles.active = dev // esto quiere decir que el applicacion.properties "principal" va a buscar el application-dev.properties y por hay va a desplegar la aplicacion <br><br>
+                    * server.port=8090 // Podemos configurar el puerto por el cual se despliega el contenedor <br>
+                    <br><br>
+                    * server.servlet.context-path=/usuarios/uno //Podemos modificar el contex path <br>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Project Structure <br><br>Orientado al dominio</td>
+                <td>
+                    * la capa de Dominio: Donde estan los DTO y los objetos de Dominio <br>
+                    * la capa de Repositorios: Donde estan definida las clases <br>
+                    * la capa de servicios: esta encargada de ser puente entre los los controladores de la Api y la persistencia <br>
+                    * la capa web: es donde estan definido los controllers <br>
+                    * la capa de la persistencia: es la encargada de interacturar con la BD <br><br><br>
+                    <img
+                    src="../../../../../assets/backend/JavaSpring/projectStructure.png"
+                    alt="projectStructure"
+                    title="projectStructure">
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/backend/JavaSpring/Structure.png"
+                    alt="Structure"
+                    title="Structure">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Structure</td>
+                <td colspan="2">
+                    <img
+                    src="../../../../../assets/backend/JavaSpring/structure2.png"
+                    alt="structure2"
+                    title="structure2">
+                </td>
+            </tr>
+
+            <tr>
+                <td>JPA</td>
+                <td>
+                    Es un framework ORM. Es una especificación de Java, standar o serie de reglas que JAVA define para que cualquier framework que quiera interecatuar con una BD tiene que seguir, por medio de Anotaciones o Decoradores conecta la BD y evitamos hacer consultas de manera nativa o de manera SQL <br><br>
+                    <strong>@Entity</strong> para indicar que una clase java representa una tabla en la base de datos<br>
+                    <strong>@Table</strong> recible el nombre de la tabla<br>
+                    <strong>@Column</strong> se le pone a los atributos de la clase y se usa cuando los nombres entre la tabla y la entidad no coinciden<br>
+                    <strong>@Id y @EmbededId</strong> representan la clave primaria, id para sencilla y embeded para compuesta<br>
+                    <strong>@GeneratedValue</strong> genera valores automaticos para las llaves de las tablas<br>
+                    <strong>@OneToMany @ManyToOne</strong> permite representar relaciones<br>
+                    <u><a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.stored-procedures">Procedimiento Almacenado</a></u><br><br>
+                    <strong>@Query</strong>(nativeQuery = true) o con la anotación <strong>@Procedure</strong>.<br>
+                    <strong>@Query (value = " SELECT * FROM categorias WHERE id_categoria = ? ", nativeQuery = true ).</strong> Desde la interfaz del crud podemos implementar querys de manera nativa de esta manera<br>
+                    <strong>@Repository</strong> Con este le indicamos a JavaSpring que la clase va a interacturar con la BD por que en esta clase estaran definidos los metodos que operaran con los registros de la BD.<br>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://platzi.com/clases/1996-java-spring/31508-query-methods/"></a></td>
+                <td>
+                    ver mas info <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods">En el siguiente enlace</a>
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/backend/JavaSpring/springData.png"
+                    alt="springData"
+                    title="springData">
+                </td>
+            </tr>
+
+            <tr>
+                <td>build.gradle</td>
+                <td>
+                    Es este archivo estaran  <br><br>
+                    * los implementation que son la injeccion de dependencias o librerias que nos permite maven Reposory agregar al proyecto <br><br>
+                    * podemos indicar la BD <strong>runtimeOnly</strong> por que solo la necesitamos en tiempo de ejecucion y entre ' ' agregamos la dependencia que nos brinda maven repository para la BD <br>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><a href="https://platzi.com/clases/1996-java-spring/31505-crear-entity-cuando-su-clave-primaria-es-compuesta/">llaves PK Compuestas</a></td>
+                <td>
+
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><a href="https://platzi.com/clases/1996-java-spring/31510-que-es-el-patron-data-mapper-y-que-resuelve/">patron Data mapper</a></td>
+                <td>
+                    Es la forma en la cual traducimos o convertimos una tabla en otra, esto con el fin de tener tablas definidas en termino de la persistencia con sus semejantes en termino de dominio <br><br>
+                    Con esto descoplamos la BD de la Api <br>
+                    mapeamos solo los campos que son necesarios y no todos los campo de las tablas ya que estos puede tener sentido de existencia en BD <br>
+                    De esta manera la Api podria cambiar de BD y no tendria conflicto con el codigo <br><br>
+                    Para usarlo debemos: <br><br>
+                    1. Descargarlo <a href="https://mapstruct.org/">En la pagina oficial</a> <br><br>
+                    2. se debe instalar un plugin que autocompletara las structuras de mapstruc dentro de intellintIDea <a href="https://plugins.jetbrains.com/plugin/10036-mapstruct-support/versions"><strong>Jet Brains</strong></a><br><br>
+
+                    Otra forma de instalar plugins en IntelliJ es ir a files > Settings o Ctrl + Alt + S / en Mac es con command + , (coma)
+                        En el panel izquierdo se selecciona "plugins"
+                        y solo queda buscar “MapStruct Support” e instalarlo
+                </td>
+                <td>
+                    <img
+                    src="../../../../../assets/backend/JavaSpring/mapStruct.PNG"
+                    alt="mapStruct"
+                    title="mapStruct">
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><a href="https://www.youtube.com/watch?v=vTu2HQrXtyw">Base de datos</a></td>
+                <td>
+                  Cuando en nuestro codigo estamos configurando la base de datos podemos indicar que al ejecutar el codigo este el back quien crea la BD o si la BD ya existe que la actualice <br><br>De la manera como lo indica la imagen <br><br>
+                  <strong>spring.jpa.hibernate.ddl-auto=update/none</strong>
+                </td>
+                <td>
+                  <img
+                  src="../../../../../assets/backend/JavaSpring/CreateObjectDBEntity.png"
+                  alt="CreateObjectDBEntity"
+                  title="CreateObjectDBEntity">
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

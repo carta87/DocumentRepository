@@ -1,0 +1,289 @@
+<div class="container">
+  <table class="table table-striped table-hover table-bordered align-middle">
+      <thead>
+          <tr>
+              <th scope="col">Referencia</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">Ejemplo</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Que es una base de datos </td>
+              <td>
+                  Es una coleccion de datos almacenados de forma organizada con una logica coherente
+              </td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td>Ques es un registro </td>
+              <td>
+                  Conjunto de campos que contienen datos relacionados con una misma entidad u obejto
+              </td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td>Que es una consulta</td>
+              <td>
+                  Es una solicitud de informacion contenida en una bd o en una tabla
+              </td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td><strong>Comandos SQL</strong></td>
+              <td>
+                  1. DDL: Data Defintion Languaje <br>
+                  2. DML: Data Manipluation Languaje <br>
+                  3. DCL: Data Control Languaje <br>
+                  4. TCL: Transaction Control Languaje <br>
+              </td>
+              <td>
+                  1. DDL: CREATE, AFTER, DROP, TRUNCATE <br>
+                  2. DML: SELECT, INSERT, UPDATE, DELETE <br>
+                  3. DCL: GRANT, ROLLBACK, SAVEPOINT, BEGIN, TRAIN <br>
+              </td>
+          </tr>
+
+          <tr>
+              <td>tipos de consulta</td>
+              <td>
+                  1. Seleccion : No modifican la informacionde las tablas <br>
+                  2. Accion : Si modifican la informacionde las tablas <br>
+                  3. Especificas de sql : solo es posible realizarlas programando SQL<br>
+              </td>
+              <td>
+                  <strong>1.  Consultas de Seleccion </strong><br> 1. Normales <br>2. De Referencia Cruzadas <br>3. De duplicados <br>4. De no coincidencias <br><br>
+                  <strong>2.  Consultas de Accion </strong><br> 1. Actualizacion <br>2. Eliminacion <br>3. Creacion de tablas <br>4. Datos anexados <br><br>
+                  <strong>3.  especificas de SQL </strong><br> 1. Union <br>2. Paso de Datos <br>3. Creacion de tablas <br>4. Datos anexados
+              </td>
+          </tr>
+
+          <tr>
+              <td>Consultas de Agrupacion o totales</td>
+              <td>
+                  En estas consultas 1° se agrupan los registros y 2° realiza la operacion
+              </td>
+              <td>
+                  <strong>Funciones de Agreagados</strong> <br><br>
+                  <strong>AVG: </strong> Calcula el promedio <br>
+                  <strong>COUNT: </strong>Cuenta los registros <br>
+                  <strong>SUM: </strong>Suma los valores <br>
+                  <strong>MAX: </strong>Devuelve el maximo <br>
+                  <strong>MIN: </strong>Devielve el minimo <br>
+              </td>
+          </tr>
+
+          <tr>
+              <td>BD</td>
+              <td>
+                  Crear <br><br>
+                  Cambiar Nombre <br> no se puede renombrar en MySql una database ver <a href="https://es.stackoverflow.com/questions/389945/cu%C3%A1l-es-el-comando-sql-para-renombrar-una-base-de-datos-de-mysql">info</a> para ello se debe emplear una tecnica de crear una base nueva y copiar la antigua ver info <br><br>
+                  Eliminar <br>
+              </td>
+              <td>
+                  <img
+                  src="../../../../../assets/bd/MySql/MySqlDatabase.png"
+                  alt="MySqlDatabase"
+                  title="MySqlDatabase">
+              </td>
+          </tr>
+
+          <tr>
+              <td>Tabla</td>
+              <td>
+                  Crear <br>
+                  Mostrar <br>
+                  Cambiar nombre <br>
+                  Eliminar <br>
+              </td>
+              <td>
+                  <img
+                  src="../../../../../assets/bd/MySql/MySqlTable.png"
+                  alt="MySqlTable"
+                  title="MySqlTable">
+              </td>
+          </tr>
+
+          <tr>
+              <td>Registro</td>
+              <td>
+                  Crear <br>
+                  Mostrar <br>
+                  Editar <br>
+                  Eliminar <br>
+              </td>
+              <td>
+                  <img
+                  src="../../../../../assets/bd/SqlServer/RegisterSqlServer.png"
+                  alt="RegisterSqlServer"
+                  title="RegisterSqlServer">
+              </td>
+          </tr>
+
+          <tr>
+              <td>Columna</td>
+              <td>
+                  Crear <br>
+                  Mostrar <br>
+                  Cambiar nombre <br>
+                  Eliminar <br>
+              </td>
+              <td>
+                  <img
+                  src="../../../../../assets/bd/SqlServer/ColumnSqlServe.png"
+                  alt="ColumnSqlServe"
+                  title="ColumnSqlServe">
+              </td>
+          </tr>
+
+
+          <tr>
+              <td>Clave Compuesta</td>
+              <td>declarar una clave primary compuesta pueden haber id repetidos...pero no con el mismo nombre</td>
+              <td>
+                  <img
+                  src="../../../../../assets/bd/SqlServer/PrimaryCompuestaSqlServer.png"
+                  alt="PrimaryCompuestaSqlServer"
+                  title="PrimaryCompuestaSqlServer">
+              </td>
+          </tr>
+
+          <tr>
+              <td>Foreign Key</td>
+              <td>Se puede realizar de las siguientes 4 maneras</td>
+              <td>
+                  <img
+                  src="../../../../../assets/bd/SqlServer/FKSqlServer.png"
+                  alt="FKSqlServer"
+                  title="FKSqlServer">
+              </td>
+          </tr>
+
+          <tr>
+              <td>Inicio</td>
+              <td>
+                  Para arrancar al dia con una BD por lo general se reinicia las tablas donde prueba es la BD y persona es la tabla
+              </td>
+              <td>
+                  <img
+                  src="../../../../../assets/bd/SqlServer/InicioSqlServer.png"
+                  alt="InicioSqlServer"
+                  title="InicioSqlServer">
+              </td>
+          </tr>
+
+          <tr>
+              <td>fecha</td>
+              <td>
+                  Para guardar la fecha en la cual se crea el registro se puede hacer de la siguiente manera
+              </td>
+              <td>
+                  <img
+                  src="../../../../../assets/bd/SqlServer/time.png"
+                  alt="time"
+                  title="time">
+              </td>
+          </tr>
+
+          <tr>
+              <td><strong>tabla salida</strong></td>
+              <td>
+                  Es un <strong>Procedimiento almacenado</strong> que muestra una tabla que esta compuesta por otras por medio de idEmpresa. <br><br><br>
+                  En este codigo podemos ver <br><br>1. Se declara una tabla que va a funcionar de salida. <br><br>2. Son <strong>casteados</strong> los datos que estan en formato fecha a string. <br><br>3. Son llamadas las tablas por medio de inner joins para unir las tablas que se requieren para llenar la tabla declarada.
+
+              </td>
+              <td>
+                  <img
+                  src="../../../../../assets/bd/SqlServer/tablaRef.png"
+                  alt="time"
+                  title="time">
+              </td>
+          </tr>
+
+          <tr>
+              <td><strong>fecha</strong></td>
+              <td>
+                  *Obtner fecha del sistema GETDATE() <br><br>
+                  *Obtener una parte de la fecha DATEPART(year, day, month..,GETDATE()) <br> <br>
+                  *Obtener el nombre del mes "NO FUNCIONA PARA DAY NI YEAR" GETNAME(MONTH, GETDATE()) <br><br>
+                  *Obtiene la diferencia en tiempo para conocer cuanto falta para alguna fecha DATEDIFF(indicar en que medidas la quiero day, month o year, '1° fecha', '2° fecha') <br><br><br><br>
+                  <strong>la siguiente imagen corresponde a una consulta en ORACLE</strong> Oracle no soporta consultas de tipo select sin la clausula from nos ofrece una tabla dummy  <br><br>
+                  <img
+                  src="../../../../../assets/bd/SqlServer/Oracle.png"
+                  alt="time"
+                  title="time">
+              </td>
+              <td>
+                  <img
+                  src="../../../../../assets/bd/SqlServer/fecha.png"
+                  alt="time"
+                  title="time">
+              </td>
+          </tr>
+          <tr>
+              <td><strong>Order by</strong></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td>Varios</td>
+              <td></td>
+              <td>
+                <img
+                src="../../../../../assets/bd/SqlServer/sqlVarios.png"
+                alt="sqlVarios"
+                title="sqlVarios">
+            </td>
+          </tr>
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+</div>

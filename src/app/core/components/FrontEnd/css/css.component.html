@@ -1,0 +1,387 @@
+<div class="container">
+    <table class="table table-striped table-hover table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Referencia</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody> 
+        <tr>
+          <td>Block vs inline</td>
+          <td>
+            Componentes block: quiere decir que ocupann toda el largo de la pantalla y si tiene varios elementos de display block se formaran de manera <strong>vertical: lista</strong> <br>
+            Componentes inline: su ancho esta determinado por el contenido y si tiene varios elementos inline se formaran de manera <strong>horizontal: registro</strong>
+          </td>
+          <td>
+            <img               
+            src="../../../../../assets/FrontEnd/css/display2.png"
+            alt="display2"
+            title="display2"><br><br>
+          </td>
+        </tr>
+        
+        <tr>
+          <td></td>
+          <td>
+            margin: 2px;   // Espacio del border del contenedor a otro contenedor hacia afuera <br>
+            padding: 2px;  // Espacio del border del contenedor al contendio del mismo hacia adentro <br>
+            border-radius: 2px; // Redondear el contenedor <br>
+            border: 1px solido green // Dar estilo al border del contenedor <br>
+            display: block; // Que el contenedor sea dinamico (alto y ancho) respecto al contenido <br>
+            max-width: 100%; // Lo maximo en Ancho que puede crecer dentro del contenedor <br>
+            list-style: none, // quitar puntos de las listas <mark>etiqueta li</mark> <br>
+            text-decoration: none // quitar underline de texto de <mark>etiqueta a</mark><br>
+          </td>
+          <td></td>
+        </tr>
+  
+        <tr>
+          <td>Set initicial .scss</td>
+          <td>
+            * {{abrellave}} <br>
+              margin: 0; <br>
+              padding: 0; <br>
+              box-sizing: border-box; <br>
+              {{cierrallave}}<br><br>
+
+              html {{abrellave}} <br>
+                font-size: 62.5%; <br>
+              {{cierrallave}}<br><br>
+          </td>
+          <td></td>
+        </tr>
+  
+        <tr>
+          <td>Response Designed</td>
+          <td> <br>
+            .product-grid {{abrellave}} <br>
+              display: grid; <br>
+              background-color: blue; <br>
+              grid-template-columns: repeat(3, 1fr); <br>
+              row-gap: 20px; <br>
+              column-gap: 20px; <br>
+              {{cierrallave}} <br> <br>
+              
+              @media (min-width: 576px) {{abrellave}} <br>
+                  .product-grid {{abrellave}} <br>
+                      background-color: red; <br>
+                      grid-template-columns: repeat(2, 1fr); <br>
+              {{cierrallave}}<br>
+              {{cierrallave}}<br><br>
+              
+              @media(min-width:768px) {{abrellave}}<br>
+                  .product-grid {{abrellave}}<br>
+                      background-color: yellow;<br>
+                      grid-template-columns: repeat(3, 1fr);<br>
+              {{cierrallave}}<br>
+              {{cierrallave}}<br><br>
+              
+              @media(min-width:992px) {{abrellave}}<br>
+                  .product-grid {{abrellave}}<br>
+                      background-color: green;<br>
+                      grid-template-columns: repeat(4, 1fr);<br>
+              {{cierrallave}}<br>
+              {{cierrallave}}<br><br>
+          </td>
+          <td></td>
+        </tr>
+  
+        <tr>
+          <td><a href="https://flexboxfroggy.com/">Sapo</a></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td><a href="https://cssgridgarden.com/">Garden</a></td>
+          <td></td>
+          <td></td>
+        </tr>
+  
+        <tr>
+          <td><a href="http://flexboxgrid.com/">Flexbox grid</a></td>
+          <td>
+            npm i flexboxgrid --save <br><br>
+            "./node_modules/flexboxgrid/dist/flexboxgrid.min.css",<br><br><br>
+            {{abreDiamante}}div class="row"{{cierraDiamante}} <br>
+            &nbsp;  {{abreDiamante}}div class="col-xs-12<br>
+            &nbsp;&nbsp;&nbsp;              col-sm-8<br>
+            &nbsp;&nbsp;&nbsp;              col-md-6<br>
+            &nbsp;&nbsp;&nbsp;              col-lg-4"{{cierraDiamante}}<br>
+            &nbsp;&nbsp;      {{abreDiamante}}div class="box"{{cierraDiamante}}Responsive{{abreDiamante}}/div{{cierraDiamante}}<br>
+            &nbsp;  {{abreDiamante}}/div{{cierraDiamante}}<br>
+          {{abreDiamante}}/div{{cierraDiamante}}<br><br><br>
+          </td>
+          <td></td>
+        </tr>
+        
+        <tr>
+          <td><strong>alineacion</strong></td>
+          <td>
+            Actualmente es posible realizar alinacion de componentes con: <br><br>
+            1. <strong>Flexbox</strong><br>
+            2. <strong>Css-grid layout</strong>
+          </td>
+          <td>
+            <img               
+            src="../../../../../assets/FrontEnd/css/actualidadAlineacion.png"
+            alt="actualidadAlineacion"
+            title="actualidadAlineacion"><br><br>
+          </td>
+        </tr>
+
+        <tr>
+          <td><strong>tecnicas de alineacion antes de css-grid</strong></td>
+          <td>
+            1. <strong>margin</strong><br>
+            2. <strong>line-height</strong><br>
+            3. <strong>table cell</strong><br>
+            4. <strong>positions</strong><br>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>1. <strong><a href="https://platzi.com/clases/2222-css-grid-layout/36033-tecnicas-de-alineamiento-antes-de-css-grid-margin-/">margin</a></strong></td>
+          <td>
+            <strong>display: grid</strong><br>
+            1. <strong>margin-top</strong><br>
+            2. <strong>margin-right</strong><br>
+            3. <strong>margin-bottom</strong><br>
+            4. <strong>margin-left</strong><br><br>
+            <a href="https://codepen.io/teffcode_/pen/YzGNOgQ ">antes</a><br>
+            <a href="https://codepen.io/teffcode_/pen/oNzBPVB">despues</a>
+          </td>
+          <td>
+            <img               
+            src="../../../../../assets/FrontEnd/css/margin.png"
+            alt="margin"
+            title="margin"><br><br>
+          </td>
+        </tr>
+
+        <tr>
+          <td>2. <strong><a href="https://platzi.com/clases/2222-css-grid-layout/36033-tecnicas-de-alineamiento-antes-de-css-grid-margin-/">line-height</a></strong></td>
+          <td>
+            <strong>display: grid</strong><br>
+            1. <strong>text-align</strong>: nos permite alinear de manera horizontal <br>
+            2. <strong>vertical-align</strong>: nos permite alinear de manera vertical  <br>
+            3. <strong>line-height</strong>: controla los <strong>altos</strong> de los textos <br><br>
+            <a href="https://codepen.io/teffcode_/pen/JjREaVK?editors=1100">antes</a><br>
+            <a href="https://codepen.io/teffcode_/pen/ExgZeJV?editors=1100">despues</a>
+          </td>
+          <td>1.
+            <img               
+            src="../../../../../assets/FrontEnd/css/textAlign.png"
+            alt="textAlign"
+            title="textAlign"><br><br>
+            2.
+            <img               
+            src="../../../../../assets/FrontEnd/css/verticalAlign.png"
+            alt="verticalAlign"
+            title="verticalAlign"><br><br>
+            3.
+            <img               
+            src="../../../../../assets/FrontEnd/css/lineAlign.png"
+            alt="lineAlign"
+            title="lineAlign"><br><br>
+          </td>
+        </tr>
+
+        <tr>
+          <td>3. <strong><a href="https://platzi.com/clases/2222-css-grid-layout/36034-tecnicas-de-alineamiento-antes-de-css-grid-table-c/">table-cell</a></strong></td>
+          <td>
+            <strong>display: table-cell</strong> <br>
+            1. <strong>text-align</strong>: nos permite alinear de manera horizontal <br>
+            2. <strong>vertical-align</strong>: nos permite alinear de manera vertical <br><br>
+            <a href="https://codepen.io/teffcode_/pen/MWjJqdM?editors=1100">antes</a><br>
+            <a href="https://codepen.io/teffcode_/pen/oNzBPRB">despues</a> <br><br>
+            <img               
+            src="../../../../../assets/FrontEnd/css/tableCell.png"
+            alt="tableCell"
+            title="tableCell"><br><br>
+          </td>
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>4. <strong><a href="https://platzi.com/clases/2222-css-grid-layout/36034-tecnicas-de-alineamiento-antes-de-css-grid-table-c/">Position</a></strong></td>
+          <td>
+            <strong>Position: absolute/relative</strong><br>
+            1. <strong>top</strong><br>
+            2. <strong>right</strong><br>
+            3. <strong>bottom</strong><br>
+            4. <strong>left</strong><br>
+            5. <strong>transform: translate()</strong><br><br>
+            <!-- <strong>display: table-cell</strong> <br>
+            1. <strong>text-align</strong>: nos permite alinear de manera horizontal <br>
+            2. <strong>vertical-align</strong>: nos permite alinear de manera vertical <br> -->
+            <a href="https://codepen.io/teffcode_/pen/bGwgxXm">antes</a><br>
+            <a href="https://codepen.io/teffcode_/pen/gOwgdVe?editors=1100">despues</a> <br><br>
+            Dependiendo del valor de position los componentes de alredeor se comportan de un manera diferente <br><br>
+            <img               
+            src="../../../../../assets/FrontEnd/css/position.png"
+            alt="position"
+            title="position"><br><br>
+          </td>
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td><strong><a href="https://platzi.com/clases/2222-css-grid-layout/36036-modos-de-escritura-y-ejes-de-alineamiento-reto/">Modos de escritura y ejes de alineamiento</a></strong></td>
+          <td>
+            Esto surgue debido a que no en todo el mundo la forma de visualizar o de leer ocurre de la misma manera <br><br>
+            <img               
+            src="../../../../../assets/FrontEnd/css/writeModes.png"
+            alt="writeModes"
+            title="writeModes"><br><br><br>
+            <img               
+            src="../../../../../assets/FrontEnd/css/writeMode2.png"
+            alt="writeMode2"
+            title="writeMode2"><br><br>
+          </td>
+          <td>
+            <strong>Direction block and direction inline</strong><br><br>
+            <img               
+            src="../../../../../assets/FrontEnd/css/display.png"
+            alt="display"
+            title="display"><br><br>
+          </td>
+        </tr>
+
+        <tr>
+          <td><strong><a href="https://platzi.com/clases/2222-css-grid-layout/36037-propiedades-fisicas-y-logicas-en-css-quiz/">Propiedades físicas y lógicas en CSS</a></strong></td>
+          <td colspan="2">
+            <img               
+            src="../../../../../assets/FrontEnd/css/physicalProperties.png"
+            alt="physicalProperties"
+            title="physicalProperties"><br><br>
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr> 
+      </tbody>
+  </table>
+  </div>
