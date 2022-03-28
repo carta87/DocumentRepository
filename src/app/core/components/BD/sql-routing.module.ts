@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { MainBdComponent } from './main-bd/main-bd.component';
 
 import { MongoDBComponent } from './mongo-db/mongo-db.component';
@@ -16,9 +17,10 @@ const routes : Routes = [
     },
 
     {
-        path: 'MongoDB',
+        path: 'NoSQL',
         component: MongoDBComponent
     },
+
     {
         path: 'mySQL',
         component: MysqlComponent
